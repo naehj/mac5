@@ -1,0 +1,98 @@
+{% extends 'base.html'%}
+
+
+{% block title %}New Client{% endblock %}
+
+
+{% block body %}
+{% load static %}
+        <section class="breadcrumb_area breadcrumb2 bgimage biz_overlay">
+            <div class="bg_image_holder">
+                <img src="{% static 'img/mac5bg.jpg'%}" alt="">
+            </div>
+            <div class="container content_above">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="breadcrumb_wrapper d-flex flex-column align-items-center">
+                            <h4 class="page_title">Submit Resume &amp; Apply</h4>
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb m-bottom-30">
+                                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Submit Resume &amp; Apply</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </div><!-- ends: .row -->
+            </div>
+        </section><!-- ends: .breadcrumb_area -->
+        <section class="apply-form p-top-100 p-bottom-110">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="apply-form--header">
+                            <h3>Apply For This Potition</h3>
+                            <p>Submit your resume below to apply for the job <span>"Account Business Manager"</span>.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+                <style type="text/css">
+                    #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+                    /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+                        We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+                </style>
+                <div id="quotation"></div>
+                <br><br><br><br><br><br><br><br>
+                <div class="container">
+                {% if status %}
+                    <div class="alert alert-{{ status }} alert-dismissible fade show"
+                        role="alert">
+                        {{ message }}
+                        <button type="button" class="close" data-dismiss="alert"
+                                aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                {% endif %}
+                <div id = "g-recaptcha-error"></div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h4 class="border-bottom p-bottom-25 m-bottom-40">Informações Pessoais</h4>
+                        <form action="https://mac5.us17.list-manage.com/subscribe/post?u=f4c437132bdc4e6f16784e633&amp;id=a6c6ba8392" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate> {% csrf_token %}
+                            {% for field in form %}
+                            <div class="fieldWrapper">
+                                {{ field.label_tag }} {{ field }}
+                            </div>
+                            {% endfor %}
+                            <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span></label>
+                            <input type="email" value="" name="EMAIL" class="required email form-control" id="mce-EMAIL"placeholder="seuemail@exemplo.com">
+                            <div class="g-recaptcha" data-sitekey="6Lfwu48UAAAAAMtMlRPLmO0ZbCyeQGdODdBvK8TC" data-callback="verifyCaptcha"></div>
+                            <div id="mce-responses" class="clear">
+                            <div class="response" id="mce-error-response" style="display:none"></div>
+                            <div class="response" id="mce-success-response" style="display:none"></div>
+                            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_f4c437132bdc4e6f16784e633_a6c6ba8392" tabindex="-1" value=""></div>
+                            <button type="submit" class="btn btn-primary m-right-25">Enviar</button>
+                        </form>
+                    </div>
+                </div><!-- end: .row -->
+            </div>
+            <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+            <script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='PHONE';ftypes[2]='phone';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+        </section><!-- ends: section -->
+<script>
+function submitUserForm() {
+    var response = grecaptcha.getResponse();
+    if(response.length == 0) {
+        document.getElementById('g-recaptcha-error').innerHTML = '<span style="color:red;">This field is required.</span>';
+        return false;
+    }
+    return true;
+}
+ 
+function verifyCaptcha() {
+    document.getElementById('g-recaptcha-error').innerHTML = '<div class="alert alert-{{ status }} alert-dismissible fade show"  role="alert"><span style="color:green;">Capatcha verifyed sucessfully.</span><button type="button" class="close" data-dismiss="alert"aria-label="Close"><span aria-hidden="true">&times;</span></button></div>';
+}
+</script>
+{% endblock %}

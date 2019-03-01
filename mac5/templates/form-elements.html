@@ -1,0 +1,1294 @@
+{% extends 'base.html'%}
+
+
+{% block title %}Home Page{% endblock %}
+
+
+{% block body %}
+<section class="breadcrumb_area breadcrumb1">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="breadcrumb_wrapper d-flex align-items-center justify-content-between flex-wrap">
+                        <h4 class="page_title">Form Elements</h4>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Form Elements</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div><!-- ends: .row -->
+        </div>
+    </section><!-- ends: .breadcrumb_area -->
+    <section class="form-elements p-top-100 p-bottom-50">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="form-tabs nav justify-content-center" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="active" id="tab-one" data-toggle="tab" href="#tab1" role="tab" aria-controls="tab1" aria-selected="true">Basic Form</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="" id="tab-two" data-toggle="tab" href="#tab2" role="tab" aria-controls="tab2" aria-selected="false">Form Group</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="" id="tab-three" data-toggle="tab" href="#tab3" role="tab" aria-controls="tab3" aria-selected="false">Select</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="" id="tab-four" data-toggle="tab" href="#tab4" role="tab" aria-controls="tab4" aria-selected="false">Checkbox</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="" id="tab-five" data-toggle="tab" href="#tab5" role="tab" aria-controls="tab5" aria-selected="false">Radio & Toggle</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab-one">
+                            <div class="showcase showcase--title1 showcase--title2">
+                                <h3>Basic Form</h3>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="showcase-box">
+                                        <div class="showcase-header">
+                                            <h5>Basic Text Inputs</h5>
+                                        </div>
+                                        <div class="showcase-body">
+                                            <form action="#">
+                                                <div class="form-group">
+                                                    <input type="text" placeholder="Base Input" class="form-control">
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="text" placeholder="Squared Input" class="form-control fc--squared">
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="text" placeholder="Rounded Input" class="form-control fc--rounded">
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div><!-- ends: .col-lg-6 -->
+                                <div class="col-lg-6">
+                                    <div class="showcase-box">
+                                        <div class="showcase-header">
+                                            <h5>Solid Text Inputs</h5>
+                                        </div>
+                                        <div class="showcase-body">
+                                            <form action="#">
+                                                <div class="form-group">
+                                                    <input type="text" placeholder="Base Input" class="form-control fc--solid-bg">
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="text" placeholder="Squared Input" class="form-control fc--squared fc--solid-bg">
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="text" placeholder="Rounded Input" class="form-control fc--rounded fc--solid-bg">
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div><!-- ends: .col-lg-6 -->
+                                <div class="col-lg-6">
+                                    <div class="showcase-box">
+                                        <div class="showcase-header">
+                                            <h5>Input With Label</h5>
+                                        </div>
+                                        <div class="showcase-body">
+                                            <form action="#">
+                                                <div class="form-group">
+                                                    <label for="intext">Base Label</label>
+                                                    <input type="text" id="intext" placeholder="Base Input" class="form-control">
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div><!-- ends: .col-lg-6 -->
+                                <div class="col-lg-6">
+                                    <div class="showcase-box">
+                                        <div class="showcase-header">
+                                            <h5>Input With Help Text</h5>
+                                        </div>
+                                        <div class="showcase-body">
+                                            <form action="#">
+                                                <input type="text" placeholder="Base Input" class="form-control">
+                                                <small class="form-text">We'll never share your email with anyone else!</small>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div><!-- ends: .col-lg-6 -->
+                                <div class="col-lg-6">
+                                    <div class="showcase-box">
+                                        <div class="showcase-header">
+                                            <h5>Disabled Input</h5>
+                                        </div>
+                                        <div class="showcase-body">
+                                            <form action="#">
+                                                <input type="text" placeholder="Disabled Input" class="form-control fc--default fc--solid-bg" disabled>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div><!-- ends: .col-lg-6 -->
+                                <div class="col-lg-6">
+                                    <div class="showcase-box">
+                                        <div class="showcase-header">
+                                            <h5>Readonly Input Field</h5>
+                                        </div>
+                                        <div class="showcase-body">
+                                            <form action="#">
+                                                <input type="text" placeholder="Readonly Input" class="form-control fc--default fc--solid-bg" readonly>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div><!-- ends: .col-lg-6 -->
+                                <div class="col-lg-6">
+                                    <div class="showcase-box">
+                                        <div class="showcase-header">
+                                            <h5>Readonly Plain Text</h5>
+                                        </div>
+                                        <div class="showcase-body">
+                                            <form action="#">
+                                                <input type="text" value="email@example.com" class="form-control-plaintext" readonly>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div><!-- ends: .col-lg-6 -->
+                                <div class="col-lg-6">
+                                    <div class="showcase-box">
+                                        <div class="showcase-header">
+                                            <h5>Predefined Input Value</h5>
+                                        </div>
+                                        <div class="showcase-body">
+                                            <div class="form-group">
+                                                <input type="text" value="Your Name" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!-- ends: .col-lg-6 -->
+                            </div><!-- ends: .row -->
+                            <div class="showcase showcase--title1 showcase--title2">
+                                <h3>Textual Input Types Options</h3>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="showcase-box">
+                                        <div class="showcase-header">
+                                            <h5>Text Type Input</h5>
+                                        </div>
+                                        <div class="showcase-body">
+                                            <form action="#">
+                                                <input type="text" placeholder="User Name" class="form-control">
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div><!-- ends: .col-lg-6 -->
+                                <div class="col-lg-6">
+                                    <div class="showcase-box">
+                                        <div class="showcase-header">
+                                            <h5>Email Input</h5>
+                                        </div>
+                                        <div class="showcase-body">
+                                            <form action="#">
+                                                <input type="email" placeholder="email@example.com" class="form-control">
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div><!-- ends: .col-lg-6 -->
+                                <div class="col-lg-6">
+                                    <div class="showcase-box">
+                                        <div class="showcase-header">
+                                            <h5>Password Input</h5>
+                                        </div>
+                                        <div class="showcase-body">
+                                            <form action="#">
+                                                <input type="password" placeholder="Enter Password" class="form-control">
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div><!-- ends: .col-lg-6 -->
+                                <div class="col-lg-6">
+                                    <div class="showcase-box">
+                                        <div class="showcase-header">
+                                            <h5>Telephones Input</h5>
+                                        </div>
+                                        <div class="showcase-body">
+                                            <form action="#">
+                                                <input type="tel" placeholder="(555)-555-555" class="form-control">
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div><!-- ends: .col-lg-6 -->
+                                <div class="col-lg-6">
+                                    <div class="showcase-box">
+                                        <div class="showcase-header">
+                                            <h5>Number</h5>
+                                        </div>
+                                        <div class="showcase-body">
+                                            <form action="#">
+                                                <input type="number" min="1" max="50" value="35" class="form-control">
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div><!-- ends: .col-lg-6 -->
+                                <div class="col-lg-6">
+                                    <div class="showcase-box">
+                                        <div class="showcase-header">
+                                            <h5>Date & Time</h5>
+                                        </div>
+                                        <div class="showcase-body">
+                                            <form action="#">
+                                                <input type="datetime-local" class="form-control">
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div><!-- ends: .col-lg-6 -->
+                                <div class="col-lg-6">
+                                    <div class="showcase-box">
+                                        <div class="showcase-header">
+                                            <h5>Date</h5>
+                                        </div>
+                                        <div class="showcase-body">
+                                            <form action="#">
+                                                <input type="date" class="form-control">
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div><!-- ends: .col-lg-6 -->
+                                <div class="col-lg-6">
+                                    <div class="showcase-box">
+                                        <div class="showcase-header">
+                                            <h5>Time</h5>
+                                        </div>
+                                        <div class="showcase-body">
+                                            <form action="#">
+                                                <input type="time" class="form-control">
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div><!-- ends: .col-lg-6 -->
+                                <div class="col-lg-6">
+                                    <div class="showcase-box">
+                                        <div class="showcase-header">
+                                            <h5>Week</h5>
+                                        </div>
+                                        <div class="showcase-body">
+                                            <form action="#">
+                                                <input type="week" class="form-control">
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div><!-- ends: .col-lg-6 -->
+                                <div class="col-lg-6">
+                                    <div class="showcase-box">
+                                        <div class="showcase-header">
+                                            <h5>Month</h5>
+                                        </div>
+                                        <div class="showcase-body">
+                                            <form action="#">
+                                                <input type="month" class="form-control">
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div><!-- ends: .col-lg-6 -->
+                                <div class="col-lg-6">
+                                    <div class="showcase-box">
+                                        <div class="showcase-header">
+                                            <h5>Color</h5>
+                                        </div>
+                                        <div class="showcase-body">
+                                            <form action="#">
+                                                <input type="color" class="form-control form-control--color" value="#f5443a">
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div><!-- ends: .col-lg-6 -->
+                                <div class="col-lg-6">
+                                    <div class="showcase-box">
+                                        <div class="showcase-header">
+                                            <h5>Range</h5>
+                                        </div>
+                                        <div class="showcase-body">
+                                            <form action="#">
+                                                <div class="range-input">
+                                                    <input type="range" class="custom-range">
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div><!-- ends: .col-lg-6 -->
+                            </div><!-- ends: .row -->
+                            <div class="showcase showcase--title1 showcase--title2">
+                                <h3>Basic Textarea</h3>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="showcase-box">
+                                        <div class="showcase-header">
+                                            <h5>Basic Textarea</h5>
+                                        </div>
+                                        <div class="showcase-body">
+                                            <form action="#">
+                                                <textarea placeholder="" class="form-control" rows="3"></textarea>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div><!-- ends: .col-lg-6 -->
+                                <div class="col-lg-6">
+                                    <div class="showcase-box">
+                                        <div class="showcase-header">
+                                            <h5>Textarea With Placeholder</h5>
+                                        </div>
+                                        <div class="showcase-body">
+                                            <form action="#">
+                                                <textarea placeholder="Simple Textarea" class="form-control" rows="3"></textarea>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div><!-- ends: .col-lg-6 -->
+                                <div class="col-lg-6">
+                                    <div class="showcase-box">
+                                        <div class="showcase-header">
+                                            <h5>Textarea With Label</h5>
+                                        </div>
+                                        <div class="showcase-body">
+                                            <form action="#">
+                                                <div class="form-group">
+                                                    <label for="txtara">Textarea Label</label>
+                                                    <textarea id="txtara" placeholder="Simple Textarea" class="form-control" rows="3"></textarea>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div><!-- ends: .col-lg-6 -->
+                                <div class="col-lg-6">
+                                    <div class="showcase-box">
+                                        <div class="showcase-header">
+                                            <h5>Solid Textarea</h5>
+                                        </div>
+                                        <div class="showcase-body">
+                                            <form action="#">
+                                                <textarea placeholder="Simple Textarea" class="form-control fc--solid-bg" rows="3"></textarea>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div><!-- ends: .col-lg-6 -->
+                            </div><!-- ends: .row -->
+                            <div class="showcase showcase--title1 showcase--title2">
+                                <h3>Basic File Browser</h3>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="showcase-box">
+                                        <div class="showcase-header">
+                                            <h5>Default File Browser</h5>
+                                        </div>
+                                        <div class="showcase-body">
+                                            <form action="#">
+                                                <input type="file" class="form-control-file">
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div><!-- ends: .col-lg-6 -->
+                                <div class="col-lg-6">
+                                    <div class="showcase-box">
+                                        <div class="showcase-header">
+                                            <h5>Custom File Browser</h5>
+                                        </div>
+                                        <div class="showcase-body">
+                                            <div class="custom-file">
+                                                <input type="file" class="custom-file-input" id="customFile">
+                                                <label class="custom-file-label" for="customFile">Choose file</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!-- ends: .col-lg-6 -->
+                            </div><!-- ends: .row -->
+                            <div class="showcase showcase--title1 showcase--title2">
+                                <h3>Basic Aligned Text</h3>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="showcase-box">
+                                        <div class="showcase-header">
+                                            <h5>Left Aligned Text</h5>
+                                        </div>
+                                        <div class="showcase-body">
+                                            <form action="#">
+                                                <input type="text" class="form-control text-left" placeholder="Left Aligned">
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div><!-- ends: .col-lg-6 -->
+                                <div class="col-lg-6">
+                                    <div class="showcase-box">
+                                        <div class="showcase-header">
+                                            <h5>Center Aligned Text</h5>
+                                        </div>
+                                        <div class="showcase-body">
+                                            <form action="#">
+                                                <input type="text" class="form-control text-center" placeholder="Center Aligned">
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div><!-- ends: .col-lg-6 -->
+                            </div><!-- ends: .row -->
+                            <div class="showcase showcase--title1 showcase--title2">
+                                <h3>Input With Tooltip</h3>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="showcase-box">
+                                        <div class="showcase-header">
+                                            <h5>Tooltip On Click</h5>
+                                        </div>
+                                        <div class="showcase-body">
+                                            <form action="#">
+                                                <input type="text" class="form-control" placeholder="Tooltip on Hover" data-toggle="tooltip" data-placement="top" data-trigger="click" title="Tooltip on Click">
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div><!-- ends: .col-lg-6 -->
+                                <div class="col-lg-6">
+                                    <div class="showcase-box">
+                                        <div class="showcase-header">
+                                            <h5>Tooltip on Hover</h5>
+                                        </div>
+                                        <div class="showcase-body">
+                                            <form action="#">
+                                                <input type="text" class="form-control" placeholder="Tooltip on Hover" data-toggle="tooltip" data-placement="top" title="Tooltip on Hover">
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div><!-- ends: .col-lg-6 -->
+                            </div><!-- ends: .row -->
+                            <div class="showcase showcase--title1 showcase--title2">
+                                <h3>Control Sizing Options</h3>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="showcase-box">
+                                        <div class="showcase-header">
+                                            <h5>Input Sizes</h5>
+                                        </div>
+                                        <div class="showcase-body">
+                                            <form action="#">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control form-control-lg" placeholder="Large Input">
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" placeholder="Default Input">
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control form-control-sm" placeholder="Small Input">
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div><!-- ends: .col-lg-6 -->
+                                <div class="col-lg-6">
+                                    <div class="showcase-box">
+                                        <div class="showcase-header">
+                                            <h5>Input Select Sizes</h5>
+                                        </div>
+                                        <div class="showcase-body">
+                                            <form action="#">
+                                                <div class="form-group">
+                                                    <select class="form-control form-control-lg">
+                                                        <option>Large select</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group">
+                                                    <select class="form-control">
+                                                        <option>Default select</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group">
+                                                    <select class="form-control form-control-sm">
+                                                        <option>Small select</option>
+                                                    </select>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div><!-- ends: .col-lg-6 -->
+                            </div><!-- ends: .row -->
+                        </div><!-- ends: .tab-pane -->
+                        <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab-two">
+                            <div class="showcase showcase--title1 showcase--title2">
+                                <h3>Basic Form Groups</h3>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="showcase-box">
+                                        <div class="showcase-header">
+                                            <h5>Left Addon Input Group</h5>
+                                        </div>
+                                        <div class="showcase-body">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text" id="basic-addon1">@</span>
+                                                </div>
+                                                <input type="text" class="form-control" placeholder="Username" aria-label="Username">
+                                            </div><!-- End: .input-group -->
+                                        </div>
+                                    </div>
+                                </div><!-- ends: .col-lg-6 -->
+                                <div class="col-lg-6">
+                                    <div class="showcase-box">
+                                        <div class="showcase-header">
+                                            <h5>Right Addon Input Group</h5>
+                                        </div>
+                                        <div class="showcase-body">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" placeholder="User Email" aria-label="User Email">
+                                                <div class="input-group-append">
+                                                    <span class="input-group-text" id="basic-addon2">@example.com</span>
+                                                </div>
+                                            </div><!-- End: .input-group -->
+                                        </div>
+                                    </div>
+                                </div><!-- ends: .col-lg-6 -->
+                                <div class="col-lg-6">
+                                    <div class="showcase-box">
+                                        <div class="showcase-header">
+                                            <h5>Addon on Both Side</h5>
+                                        </div>
+                                        <div class="showcase-body">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">#</span>
+                                                </div>
+                                                <input type="text" class="form-control">
+                                                <div class="input-group-append">
+                                                    <span class="input-group-text">px</span>
+                                                </div>
+                                            </div><!-- End: .input-group -->
+                                        </div>
+                                    </div>
+                                </div><!-- ends: .col-lg-6 -->
+                                <div class="col-lg-6">
+                                    <div class="showcase-box">
+                                        <div class="showcase-header">
+                                            <h5>Solid Style</h5>
+                                        </div>
+                                        <div class="showcase-body">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">#</span>
+                                                </div>
+                                                <input type="text" class="form-control fc--solid-bg">
+                                                <div class="input-group-append">
+                                                    <span class="input-group-text">px</span>
+                                                </div>
+                                            </div><!-- End: .input-group -->
+                                        </div>
+                                    </div>
+                                </div><!-- ends: .col-lg-6 -->
+                            </div><!-- ends: .row -->
+                            <div class="showcase showcase--title1 showcase--title2">
+                                <h3>Icon Input Group Style 1</h3>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="showcase-box">
+                                        <div class="showcase-header">
+                                            <h5>Left Icon</h5>
+                                        </div>
+                                        <div class="showcase-body">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text" id="basic-addon3"><i class="la la-user"></i></span>
+                                                </div>
+                                                <input type="text" class="form-control" placeholder="Username" aria-label="Username">
+                                            </div><!-- End: .input-group -->
+                                        </div>
+                                    </div>
+                                </div><!-- ends: .col-lg-6 -->
+                                <div class="col-lg-6">
+                                    <div class="showcase-box">
+                                        <div class="showcase-header">
+                                            <h5>Right Icon</h5>
+                                        </div>
+                                        <div class="showcase-body">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" placeholder="User Email" aria-label="User Email">
+                                                <div class="input-group-append">
+                                                    <span class="input-group-text" id="basic-addon4"><i class="la la-phone-square"></i></span>
+                                                </div>
+                                            </div><!-- End: .input-group -->
+                                        </div>
+                                    </div>
+                                </div><!-- ends: .col-lg-6 -->
+                                <div class="col-lg-6">
+                                    <div class="showcase-box">
+                                        <div class="showcase-header">
+                                            <h5>Icon on Both Side</h5>
+                                        </div>
+                                        <div class="showcase-body">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text"><i class="la la-filter"></i></span>
+                                                </div>
+                                                <input type="text" class="form-control">
+                                                <div class="input-group-append">
+                                                    <span class="input-group-text"><i class="la la-cog"></i></span>
+                                                </div>
+                                            </div><!-- End: .input-group -->
+                                        </div>
+                                    </div>
+                                </div><!-- ends: .col-lg-6 -->
+                                <div class="col-lg-6">
+                                    <div class="showcase-box">
+                                        <div class="showcase-header">
+                                            <h5>Solid Style</h5>
+                                        </div>
+                                        <div class="showcase-body">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text"><i class="la la-clone"></i></span>
+                                                </div>
+                                                <input type="text" class="form-control fc--solid-bg">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!-- ends: .col-lg-6 -->
+                                <div class="col-lg-6">
+                                    <div class="showcase-box">
+                                        <div class="showcase-header">
+                                            <h5>Left Color Icon</h5>
+                                        </div>
+                                        <div class="showcase-body">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text bg-primary color-light border-primary" id="basic-addon5"><i class="la la-user"></i></span>
+                                                </div>
+                                                <input type="text" class="form-control" placeholder="Username" aria-label="Username">
+                                            </div><!-- End: .input-group -->
+                                        </div>
+                                    </div>
+                                </div><!-- ends: .col-lg-6 -->
+                                <div class="col-lg-6">
+                                    <div class="showcase-box">
+                                        <div class="showcase-header">
+                                            <h5>Right Color Icon</h5>
+                                        </div>
+                                        <div class="showcase-body">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" placeholder="User Email" aria-label="User Email">
+                                                <div class="input-group-append">
+                                                    <span class="input-group-text bg-primary color-light border-primary" id="basic-addon6"><i class="la la-phone-square"></i></span>
+                                                </div>
+                                            </div><!-- End: .input-group -->
+                                        </div>
+                                    </div>
+                                </div><!-- ends: .col-lg-6 -->
+                                <div class="col-lg-6">
+                                    <div class="showcase-box">
+                                        <div class="showcase-header">
+                                            <h5>Color Icon on Both Side</h5>
+                                        </div>
+                                        <div class="showcase-body">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text bg-secondary color-light border-secondary"><i class="la la-filter"></i></span>
+                                                </div>
+                                                <input type="text" class="form-control">
+                                                <div class="input-group-append">
+                                                    <span class="input-group-text bg-primary color-light border-primary"><i class="la la-cog"></i></span>
+                                                </div>
+                                            </div><!-- End: .input-group -->
+                                        </div>
+                                    </div>
+                                </div><!-- ends: .col-lg-6 -->
+                                <div class="col-lg-6">
+                                    <div class="showcase-box">
+                                        <div class="showcase-header">
+                                            <h5>Solid Color Style</h5>
+                                        </div>
+                                        <div class="showcase-body">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text bg-primary color-light border-primary"><i class="la la-clone"></i></span>
+                                                </div>
+                                                <input type="text" class="form-control fc--solid-bg">
+                                            </div><!-- End: .input-group -->
+                                        </div>
+                                    </div>
+                                </div><!-- ends: .col-lg-6 -->
+                            </div><!-- ends: .row -->
+                            <div class="showcase showcase--title1 showcase--title2">
+                                <h3>Icon Input Groups Style 2</h3>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="showcase-box">
+                                        <div class="showcase-header">
+                                            <h5>Left Icon</h5>
+                                        </div>
+                                        <div class="showcase-body">
+                                            <div class="input-group input-group-light">
+                                                <span class="icon-left" id="basic-addon7"><i class="la la-envelope"></i></span>
+                                                <input type="text" class="form-control" placeholder="Enter your email" aria-label="Username">
+                                            </div><!-- End: .input-group -->
+                                        </div>
+                                    </div>
+                                </div><!-- ends: .col-lg-6 -->
+                                <div class="col-lg-6">
+                                    <div class="showcase-box">
+                                        <div class="showcase-header">
+                                            <h5>Right Icon</h5>
+                                        </div>
+                                        <div class="showcase-body">
+                                            <div class="input-group input-group-light">
+                                                <span class="icon-right" id="basic-addon8"><i class="la la-phone-square"></i></span>
+                                                <input type="text" class="form-control" placeholder="Username" aria-label="Username">
+                                            </div><!-- End: .input-group -->
+                                        </div>
+                                    </div>
+                                </div><!-- ends: .col-lg-6 -->
+                                <div class="col-lg-6">
+                                    <div class="showcase-box">
+                                        <div class="showcase-header">
+                                            <h5>Icon on Both Side</h5>
+                                        </div>
+                                        <div class="showcase-body">
+                                            <div class="input-group input-group-light">
+                                                <span class="icon-left" id="basic-addon9"><i class="la la-user"></i></span>
+                                                <input type="text" class="form-control" placeholder="Username" aria-label="Username">
+                                                <span class="icon-right" id="basic-addon15"><i class="la la-check-circle"></i></span>
+                                            </div><!-- End: .input-group -->
+                                        </div>
+                                    </div>
+                                </div><!-- ends: .col-lg-6 -->
+                                <div class="col-lg-6">
+                                    <div class="showcase-box">
+                                        <div class="showcase-header">
+                                            <h5>Solid Styles</h5>
+                                        </div>
+                                        <div class="showcase-body">
+                                            <div class="input-group input-group-light">
+                                                <span class="icon-left" id="basic-addon10"><i class="la la-user"></i></span>
+                                                <input type="text" class="form-control fc--solid-bg" placeholder="Username" aria-label="Username">
+                                            </div><!-- End: .input-group -->
+                                        </div>
+                                    </div>
+                                </div><!-- ends: .col-lg-6 -->
+                            </div><!-- ends: .row -->
+                            <div class="showcase showcase--title1 showcase--title2">
+                                <h3>Icon Input Groups Color Styles</h3>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="showcase-box">
+                                        <div class="showcase-header">
+                                            <h5>Left Icon</h5>
+                                        </div>
+                                        <div class="showcase-body">
+                                            <div class="input-group input-group-light">
+                                                <span class="icon-left color-primary" id="basic-addon11"><i class="la la-user"></i></span>
+                                                <input type="text" class="form-control" placeholder="Username" aria-label="Username">
+                                            </div><!-- End: .input-group -->
+                                        </div>
+                                    </div>
+                                </div><!-- ends: .col-lg-6 -->
+                                <div class="col-lg-6">
+                                    <div class="showcase-box">
+                                        <div class="showcase-header">
+                                            <h5>Right Icon</h5>
+                                        </div>
+                                        <div class="showcase-body">
+                                            <div class="input-group input-group-light">
+                                                <span class="icon-right color-primary" id="basic-addon12"><i class="la la-phone-square"></i></span>
+                                                <input type="text" class="form-control" placeholder="Username" aria-label="Username">
+                                            </div><!-- End: .input-group -->
+                                        </div>
+                                    </div>
+                                </div><!-- ends: .col-lg-6 -->
+                                <div class="col-lg-6">
+                                    <div class="showcase-box">
+                                        <div class="showcase-header">
+                                            <h5>Icon on Both Side</h5>
+                                        </div>
+                                        <div class="showcase-body">
+                                            <div class="input-group input-group-light">
+                                                <span class="icon-left color-primary" id="basic-addon13"><i class="la la-user"></i></span>
+                                                <input type="text" class="form-control" placeholder="Username" aria-label="Username">
+                                                <span class="icon-right color-primary" id="basic-addon1564"><i class="la la-check-circle"></i></span>
+                                            </div><!-- End: .input-group -->
+                                        </div>
+                                    </div>
+                                </div><!-- ends: .col-lg-6 -->
+                                <div class="col-lg-6">
+                                    <div class="showcase-box">
+                                        <div class="showcase-header">
+                                            <h5>Solid Style</h5>
+                                        </div>
+                                        <div class="showcase-body">
+                                            <div class="input-group input-group-light">
+                                                <span class="icon-left color-primary" id="basic-addon14"><i class="la la-user"></i></span>
+                                                <input type="text" class="form-control fc--solid-bg" placeholder="Username" aria-label="Username">
+                                            </div><!-- End: .input-group -->
+                                        </div>
+                                    </div>
+                                </div><!-- ends: .col-lg-6 -->
+                            </div><!-- ends: .row -->
+                        </div><!-- ends: .tab-pane -->
+                        <div class="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="tab-three">
+                            <div class="showcase showcase--title1 showcase--title2">
+                                <h3>Basic Select</h3>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="showcase-box">
+                                        <div class="showcase-header">
+                                            <h5>Single Select</h5>
+                                        </div>
+                                        <div class="showcase-body">
+                                            <div class="form-group">
+                                                <div class="select-basic">
+                                                    <select class="form-control">
+                                                        <option>Select Option</option>
+                                                        <option>Option 1</option>
+                                                        <option>Option 2</option>
+                                                        <option>Option 3</option>
+                                                        <option>Option 4</option>
+                                                    </select>
+                                                </div>
+                                            </div><!-- End: .form-group -->
+                                        </div>
+                                    </div>
+                                </div><!-- ends: .col-lg-6 -->
+                                <div class="col-lg-6">
+                                    <div class="showcase-box">
+                                        <div class="showcase-header">
+                                            <h5>Select group</h5>
+                                        </div>
+                                        <div class="showcase-body">
+                                            <div class="form-group">
+                                                <div class="select-multiple select-basic">
+                                                    <select class="multiple-select form-control" name="states[]">
+                                                        <optgroup label="Alaskan/Hawaiian Time Zone">
+                                                            <option value="AK">Alaska</option>
+                                                            <option value="HI">Hawaii</option>
+                                                        </optgroup>
+                                                        <optgroup label="Pacific Time Zone">
+                                                            <option value="CA">California</option>
+                                                            <option value="NV">Nevada</option>
+                                                            <option value="OR">Oregon</option>
+                                                            <option value="WA">Washington</option>
+                                                        </optgroup>
+                                                        <optgroup label="Mountain Time Zone">
+                                                            <option value="AZ">Arizona</option>
+                                                            <option value="CO">Colorado</option>
+                                                            <option value="ID">Idaho</option>
+                                                            <option value="MT">Montana</option>
+                                                            <option value="NE">Nebraska</option>
+                                                            <option value="NM">New Mexico</option>
+                                                            <option value="ND">North Dakota</option>
+                                                            <option value="UT">Utah</option>
+                                                            <option value="WY">Wyoming</option>
+                                                        </optgroup>
+                                                        <optgroup label="Central Time Zone">
+                                                            <option value="AL">Alabama</option>
+                                                            <option value="AR">Arkansas</option>
+                                                            <option value="IL">Illinois</option>
+                                                            <option value="IA">Iowa</option>
+                                                            <option value="KS">Kansas</option>
+                                                            <option value="KY">Kentucky</option>
+                                                            <option value="LA">Louisiana</option>
+                                                            <option value="MN">Minnesota</option>
+                                                            <option value="MS">Mississippi</option>
+                                                            <option value="MO">Missouri</option>
+                                                            <option value="OK">Oklahoma</option>
+                                                            <option value="SD">South Dakota</option>
+                                                            <option value="TX">Texas</option>
+                                                            <option value="TN">Tennessee</option>
+                                                            <option value="WI">Wisconsin</option>
+                                                        </optgroup>
+                                                    </select>
+                                                </div>
+                                            </div><!-- End: .form-group -->
+                                        </div>
+                                    </div>
+                                </div><!-- ends: .col-lg-6 -->
+                                <div class="col-lg-6">
+                                    <div class="showcase-box">
+                                        <div class="showcase-header">
+                                            <h5>Multiple Select</h5>
+                                        </div>
+                                        <div class="showcase-body">
+                                            <div class="form-group">
+                                                <div class="select-multiple">
+                                                    <select class="form-control" name="states[]" multiple>
+                                                        <optgroup label="Pacific Time Zone">
+                                                            <option value="CA">California</option>
+                                                            <option value="NV">Nevada</option>
+                                                            <option value="OR">Oregon</option>
+                                                            <option value="WA">Washington</option>
+                                                        </optgroup>
+                                                        <optgroup label="Mountain Time Zone">
+                                                            <option value="AZ">Arizona</option>
+                                                            <option value="CO">Colorado</option>
+                                                            <option value="ID">Idaho</option>
+                                                            <option value="MT">Montana</option>
+                                                            <option value="NE">Nebraska</option>
+                                                            <option value="NM">New Mexico</option>
+                                                            <option value="ND">North Dakota</option>
+                                                            <option value="UT">Utah</option>
+                                                            <option value="WY">Wyoming</option>
+                                                        </optgroup>
+                                                    </select>
+                                                </div>
+                                            </div><!-- End: .form-group -->
+                                        </div>
+                                    </div>
+                                </div><!-- ends: .col-lg-6 -->
+                                <div class="col-lg-6">
+                                    <div class="showcase-box">
+                                        <div class="showcase-header">
+                                            <h5>Select with search</h5>
+                                        </div>
+                                        <div class="showcase-body">
+                                            <div class="form-group">
+                                                <div class="select-multiple select-basic">
+                                                    <select class="select2_default form-control" name="states[]">
+                                                        <optgroup label="Pacific Time Zone">
+                                                            <option value="CA">California</option>
+                                                            <option value="NV">Nevada</option>
+                                                            <option value="OR">Oregon</option>
+                                                            <option value="WA">Washington</option>
+                                                        </optgroup>
+                                                        <optgroup label="Mountain Time Zone">
+                                                            <option value="AZ">Arizona</option>
+                                                            <option value="CO">Colorado</option>
+                                                            <option value="ID">Idaho</option>
+                                                            <option value="MT">Montana</option>
+                                                            <option value="NE">Nebraska</option>
+                                                            <option value="NM">New Mexico</option>
+                                                            <option value="ND">North Dakota</option>
+                                                            <option value="UT">Utah</option>
+                                                            <option value="WY">Wyoming</option>
+                                                        </optgroup>
+                                                    </select>
+                                                </div>
+                                            </div><!-- End: .form-group -->
+                                        </div>
+                                    </div>
+                                </div><!-- ends: .col-lg-6 -->
+                                <div class="col-lg-6">
+                                    <div class="showcase-box">
+                                        <div class="showcase-header">
+                                            <h5>Tag/Multiple selection</h5>
+                                        </div>
+                                        <div class="showcase-body">
+                                            <select class="select2_tagged form-control" name="states[]">
+                                                <optgroup label="Pacific Time Zone">
+                                                    <option value="CA">California</option>
+                                                    <option value="NV">Nevada</option>
+                                                    <option value="OR">Oregon</option>
+                                                    <option value="WA">Washington</option>
+                                                </optgroup>
+                                                <optgroup label="Mountain Time Zone">
+                                                    <option value="AZ">Arizona</option>
+                                                    <option value="CO">Colorado</option>
+                                                    <option value="ID">Idaho</option>
+                                                    <option value="MT">Montana</option>
+                                                    <option value="NE">Nebraska</option>
+                                                    <option value="NM">New Mexico</option>
+                                                    <option value="ND">North Dakota</option>
+                                                    <option value="UT">Utah</option>
+                                                    <option value="WY">Wyoming</option>
+                                                </optgroup>
+                                            </select><!-- End: .form-control -->
+                                        </div>
+                                    </div>
+                                </div><!-- ends: .col-lg-6 -->
+                                <div class="col-lg-6">
+                                    <div class="showcase-box">
+                                        <div class="showcase-header">
+                                            <h5>Custom select with icon</h5>
+                                        </div>
+                                        <div class="showcase-body">
+                                            <select class="selection_with_icon form-control" name="states[]">
+                                                <option value="wordpress">WordPress</option>
+                                                <option value="joomla">Joomla</option>
+                                                <option value="github">Github</option>
+                                                <option value="amazon">Amazon</option>
+                                            </select><!-- End: .form-control -->
+                                        </div>
+                                    </div>
+                                </div><!-- ends: .col-lg-6 -->
+                            </div><!-- ends: .row -->
+                        </div><!-- ends: .tab-pane -->
+                        <div class="tab-pane fade" id="tab4" role="tabpanel" aria-labelledby="tab-four">
+                            <div class="mb-5 pb-5">
+                                <div class="showcase showcase--title1 showcase--title2">
+                                    <h3>Default Checkbox</h3>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-6 m-bottom-60">
+                                        <form action="#">
+                                            <div class="custom-control custom-checkbox checkbox-info">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck3" checked>
+                                                <label class="custom-control-label" for="customCheck3">Checked</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox checkbox-primary">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck4">
+                                                <label class="custom-control-label" for="customCheck4">Unchecked</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox checkbox-primary">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck5" disabled>
+                                                <label class="custom-control-label" for="customCheck5">Disabled</label>
+                                            </div>
+                                        </form>
+                                    </div><!-- ends: .col-lg-4 -->
+                                    <div class="col-lg-4 col-md-6 m-bottom-60">
+                                        <form action="#">
+                                            <div class="custom-control custom-checkbox checkbox-outline checkbox-outline-primary">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck6" checked>
+                                                <label class="custom-control-label" for="customCheck6">Checked</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox checkbox-outline checkbox-outline-secondary">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck7">
+                                                <label class="custom-control-label" for="customCheck7">Unchecked</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox checkbox-outline">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck8" disabled>
+                                                <label class="custom-control-label" for="customCheck8">Disabled</label>
+                                            </div>
+                                        </form>
+                                    </div><!-- ends: .col-lg-4 -->
+                                    <div class="col-lg-4 col-md-6">
+                                        <form action="#">
+                                            <div class="custom-control custom-checkbox checkbox-outline checkbox-outline-gray">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck9" checked>
+                                                <label class="custom-control-label" for="customCheck9">Checked</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox checkbox-outline checkbox-outline-gray">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck10">
+                                                <label class="custom-control-label" for="customCheck10">Unchecked</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox checkbox-outline checkbox-outline-gray">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck11" disabled>
+                                                <label class="custom-control-label" for="customCheck11">Disabled</label>
+                                            </div>
+                                        </form>
+                                    </div><!-- ends: .col-lg-4 -->
+                                </div><!-- ends: .row -->
+                                <div class="showcase showcase--title1 showcase--title2">
+                                    <h3>Checkbox States</h3>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-6 m-bottom-60">
+                                        <form action="#">
+                                            <div class="custom-control custom-checkbox checkbox-primary">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck12" checked>
+                                                <label class="custom-control-label" for="customCheck12">Primary</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox checkbox-secondary">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck13">
+                                                <label class="custom-control-label" for="customCheck13">Secondary</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox checkbox-success">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck14">
+                                                <label class="custom-control-label" for="customCheck14">Success</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox checkbox-info">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck15">
+                                                <label class="custom-control-label" for="customCheck15">Info</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox checkbox-warning">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck16">
+                                                <label class="custom-control-label" for="customCheck16">Warning</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox checkbox-danger">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck17">
+                                                <label class="custom-control-label" for="customCheck17">Danger</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox checkbox-dark">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck18">
+                                                <label class="custom-control-label" for="customCheck18">Dark</label>
+                                            </div>
+                                        </form>
+                                    </div><!-- ends: .col-lg-4 -->
+                                    <div class="col-lg-4 col-md-6 m-bottom-60">
+                                        <form action="#">
+                                            <div class="custom-control custom-checkbox checkbox-outline checkbox-outline-primary">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck19" checked>
+                                                <label class="custom-control-label" for="customCheck19">Primary</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox checkbox-outline checkbox-outline-secondary">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck20">
+                                                <label class="custom-control-label" for="customCheck20">Secondary</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox checkbox-outline checkbox-outline-success">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck21">
+                                                <label class="custom-control-label" for="customCheck21">Success</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox checkbox-outline checkbox-outline-info">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck22">
+                                                <label class="custom-control-label" for="customCheck22">Info</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox checkbox-outline checkbox-outline-warning">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck23">
+                                                <label class="custom-control-label" for="customCheck23">Warning</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox checkbox-outline checkbox-outline-danger">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck24">
+                                                <label class="custom-control-label" for="customCheck24">Danger</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox checkbox-outline checkbox-outline-dark">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck25">
+                                                <label class="custom-control-label" for="customCheck25">Dark</label>
+                                            </div>
+                                        </form>
+                                    </div><!-- ends: .col-lg-4 -->
+                                    <div class="col-lg-4 col-md-6">
+                                        <form action="#">
+                                            <div class="custom-control custom-checkbox checkbox-outline checkbox-outline-primary checkbox-rounded">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck26" checked>
+                                                <label class="custom-control-label" for="customCheck26">Primary</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox checkbox-outline checkbox-outline-secondary checkbox-rounded">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck27">
+                                                <label class="custom-control-label" for="customCheck27">Secondary</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox checkbox-outline checkbox-outline-success checkbox-rounded">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck28">
+                                                <label class="custom-control-label" for="customCheck28">Success</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox checkbox-outline checkbox-outline-info checkbox-rounded">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck29">
+                                                <label class="custom-control-label" for="customCheck29">Info</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox checkbox-outline checkbox-outline-warning checkbox-rounded">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck30">
+                                                <label class="custom-control-label" for="customCheck30">Warning</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox checkbox-outline checkbox-outline-danger checkbox-rounded">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck31">
+                                                <label class="custom-control-label" for="customCheck31">Danger</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox checkbox-outline checkbox-outline-dark checkbox-rounded">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck32">
+                                                <label class="custom-control-label" for="customCheck32">Dark</label>
+                                            </div>
+                                        </form>
+                                    </div><!-- ends: .col-lg-4 -->
+                                </div><!-- ends: .row -->
+                            </div>
+                        </div><!-- ends: .tab-pane -->
+                        <div class="tab-pane fade" id="tab5" role="tabpanel" aria-labelledby="tab-five">
+                            <div class="showcase showcase--title1 showcase--title2">
+                                <h3>Default Radios</h3>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <form action="#">
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" id="customRadio3" name="customRadio1" class="custom-control-input">
+                                            <label class="custom-control-label" for="customRadio3">Radio is off</label>
+                                        </div>
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" id="customRadio4" name="customRadio1" class="custom-control-input" checked>
+                                            <label class="custom-control-label" for="customRadio4">Radio is on</label>
+                                        </div>
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" id="customRadio5" name="customRadio1" class="custom-control-input" disabled>
+                                            <label class="custom-control-label" for="customRadio5">Disabled Radio</label>
+                                        </div>
+                                    </form>
+                                </div><!-- ends: .col-lg-4 -->
+                                <div class="col-lg-4">
+                                    <form action="#">
+                                        <div class="custom-control custom-radio custom-radio-two">
+                                            <input type="radio" id="customRadio6" name="customRadio1" class="custom-control-input">
+                                            <label class="custom-control-label" for="customRadio6">Radio is off</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-radio-two">
+                                            <input type="radio" id="customRadio7" name="customRadio1" class="custom-control-input" checked>
+                                            <label class="custom-control-label" for="customRadio7">Radio is on</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-radio-two">
+                                            <input type="radio" id="customRadio8" name="customRadio1" class="custom-control-input" disabled>
+                                            <label class="custom-control-label" for="customRadio8">Disabled Radio</label>
+                                        </div>
+                                    </form>
+                                </div><!-- ends: .col-lg-4 -->
+                                <div class="col-lg-4">
+                                    <form action="#">
+                                        <div class="custom-control custom-radio custom-radio-three">
+                                            <input type="radio" id="customRadio9" name="customRadio1" class="custom-control-input">
+                                            <label class="custom-control-label" for="customRadio9">Radio is off</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-radio-three">
+                                            <input type="radio" id="customRadio10" name="customRadio1" class="custom-control-input" checked>
+                                            <label class="custom-control-label" for="customRadio10">Radio is on</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-radio-three">
+                                            <input type="radio" id="customRadio11" name="customRadio1" class="custom-control-input" disabled>
+                                            <label class="custom-control-label" for="customRadio11">Disabled Radio</label>
+                                        </div>
+                                    </form>
+                                </div><!-- ends: .col-lg-4 -->
+                            </div><!-- ends: .row -->
+                            <div class="showcase showcase--title1 showcase--title2">
+                                <h3>Toggle Buttons</h3>
+                            </div>
+                            <div class="row mb-5 pb-2">
+                                <div class="col-lg-4">
+                                    <div class="toggle-btn">
+                                        <label class="toggle-switch">
+                                            <input type="checkbox">
+                                            <span class="slider round"></span>
+                                        </label>
+                                    </div>
+                                    <div class="toggle-btn">
+                                        <label class="toggle-switch">
+                                            <input type="checkbox" checked>
+                                            <span class="slider round"></span>
+                                        </label>
+                                    </div>
+                                </div><!-- ends: .col-lg-4 -->
+                                <div class="col-lg-4">
+                                    <div class="toggle-btn">
+                                        <label class="toggle-switch toggle-switch-text">
+                                            <input type="checkbox">
+                                            <span class="slider round">
+                                                <span class="on">On</span>
+                                                <span class="off">Off</span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div class="toggle-btn">
+                                        <label class="toggle-switch toggle-switch-text">
+                                            <input type="checkbox" checked>
+                                            <span class="slider round">
+                                                <span class="on">On</span>
+                                                <span class="off">Off</span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div><!-- ends: .col-lg-4 -->
+                                <div class="col-lg-4">
+                                    <div class="toggle-btn">
+                                        <label class="toggle-switch toggle-switch-bordered">
+                                            <input type="checkbox">
+                                            <span class="slider round"></span>
+                                        </label>
+                                    </div>
+                                    <div class="toggle-btn">
+                                        <label class="toggle-switch toggle-switch-bordered">
+                                            <input type="checkbox" checked>
+                                            <span class="slider round"></span>
+                                        </label>
+                                    </div>
+                                </div><!-- ends: .col-lg-4 -->
+                            </div><!-- ends: .row -->
+                        </div><!-- ends: .tab-pane -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- ends: .form-elements -->
+{% endblock %}

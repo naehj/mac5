@@ -1,0 +1,1449 @@
+{% extends 'base.html'%}
+
+
+{% block title %}{{ service.page_title }}{% endblock %}
+
+
+{% block body %}
+    {% load static %}
+        <section class="breadcrumb_area breadcrumb2 bgimage biz_overlay">
+            <div class="bg_image_holder">
+                <img src="{% static 'img/mac5bg.jpg'%}" alt="">
+            </div>
+            <div class="container content_above">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="breadcrumb_wrapper d-flex flex-column align-items-center">
+                            <h4 class="page_title">{{ service.page_title }}</h4>
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb m-bottom-30">
+                                    <li class="breadcrumb-item"><a href="/">{{ service.pathlist.0 }}</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">{{ service.pathlist.1 }}</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </div><!-- ends: .row -->
+            </div>
+        </section><!-- ends: .breadcrumb_area -->
+        {% if service.firstsectiontitleofservice %}
+            <section class="p-top-50 p-bottom-110">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 margin-md-60">
+                            <div class="m-bottom-30">
+                                <div class="divider text-left">
+                                    <h2>{{ service.firstsectiontitleofservice }}</h2>
+                                    <p class="mx-auto"></p>
+                                </div>
+                            </div>
+                            {% if service.firstsectionfirstdescription %}
+                                <p>{{ service.firstsectionfirstdescription }}</p>
+                            {% endif %}
+                            {% if service.firstsectiontitleofservice == 'Automação Comercial' %}
+                                <ul class="bullet--list1 m-top-25">
+                                    {% if service.firstsectionworkslist.0 %}
+                                        <li class="bullet_list"><strong class="color-dark">{{ service.firstsectionworkslist.0 }} -</strong> {{ service.firstsectionworkslist.1 }}</li>
+                                    {% endif %}
+                                    {% if service.firstsectionworkslist.2 %}
+                                        <li class="bullet_list"><strong class="color-dark">{{ service.firstsectionworkslist.2 }} -</strong> {{ service.firstsectionworkslist.3 }}</li>
+                                    {% endif %}
+                                    {% if service.firstsectionworkslist.4 %}
+                                        <li class="bullet_list"><strong class="color-dark">{{ service.firstsectionworkslist.4 }} -</strong> {{ service.firstsectionworkslist.5 }}</li>
+                                    {% endif %}
+                                    {% if service.firstsectionworkslist.6 %}
+                                        <li class="bullet_list"><strong class="color-dark">{{ service.firstsectionworkslist.6 }} -</strong> {{ service.firstsectionworkslist.7 }}</li>
+                                    {% endif %}
+                                    {% if service.firstsectionworkslist.8 %}
+                                        <li class="bullet_list"><strong class="color-dark">{{ service.firstsectionworkslist.8 }} -</strong> {{ service.firstsectionworkslist.9 }}</li>
+                                    {% endif %}
+                                </ul>
+                            </div><!-- ends: .col-lg-6 -->
+                            <div class="col-lg-6">
+                                <ul class="bullet--list1 m-top-110">
+                                    {% if service.firstsectionworkslist.10 %}
+                                        <li class="bullet_list"><strong class="color-dark">{{ service.firstsectionworkslist.10 }} -</strong> {{ service.firstsectionworkslist.11 }}</li>
+                                    {% endif %}
+                                    {% if service.firstsectionworkslist.12 %}
+                                        <li class="bullet_list"><strong class="color-dark">{{ service.firstsectionworkslist.12 }} -</strong> {{ service.firstsectionworkslist.13 }}</li>
+                                    {% endif %}
+                                    {% if service.firstsectionworkslist.14 %}
+                                        <li class="bullet_list"><strong class="color-dark">{{ service.firstsectionworkslist.14 }} -</strong> {{ service.firstsectionworkslist.15 }}</li>
+                                    {% endif %}
+                                    {% if service.firstsectionworkslist.16 %}
+                                        <li class="bullet_list"><strong class="color-dark">{{ service.firstsectionworkslist.16 }} -</strong> {{ service.firstsectionworkslist.17 }}</li>
+                                    {% endif %}
+                                    {% if service.firstsectionworkslist.18 %}
+                                        <li class="bullet_list"><strong class="color-dark">{{ service.firstsectionworkslist.18 }} -</strong> {{ service.firstsectionworkslist.19 }}</li>
+                                    {% endif %}
+                                </ul>
+                                <br>
+                                <a class="btn btn-primary" id="quotation_link" href="#quotation">Fale Conosco</a>
+                            </div><!-- ends: .col-lg-6 -->
+                        {% elif service.firstsectiontitleofservice == 'Telefonia' %}
+                            <ul class="bullet--list1 m-top-25">
+                                    {% if service.firstsectionworkslist.0 %}
+                                        <li class="bullet_list"><strong class="color-dark">{{ service.firstsectionworkslist.0 }} -</strong> {{ service.firstsectionworkslist.1 }}</li>
+                                    {% endif %}
+                                    {% if service.firstsectionworkslist.2 %}
+                                        <li class="bullet_list"><strong class="color-dark">{{ service.firstsectionworkslist.2 }} -</strong> {{ service.firstsectionworkslist.3 }}</li>
+                                    {% endif %}
+                                    {% if service.firstsectionworkslist.4 %}
+                                        <li class="bullet_list"><strong class="color-dark">{{ service.firstsectionworkslist.4 }} -</strong> {{ service.firstsectionworkslist.5 }}</li>
+                                    {% endif %}
+                                    {% if service.firstsectionworkslist.6 %}
+                                        <li class="bullet_list"><strong class="color-dark">{{ service.firstsectionworkslist.6 }} -</strong> {{ service.firstsectionworkslist.7 }}</li>
+                                    {% endif %}
+                                    {% if service.firstsectionworkslist.8 %}
+                                        <li class="bullet_list"><strong class="color-dark">{{ service.firstsectionworkslist.8 }} -</strong> {{ service.firstsectionworkslist.9 }}</li>
+                                    {% endif %}
+                                    {% if service.firstsectionworkslist.10 %}
+                                        <li class="bullet_list"><strong class="color-dark">{{ service.firstsectionworkslist.10 }} -</strong> {{ service.firstsectionworkslist.11 }}</li>
+                                    {% endif %}
+                                    {% if service.firstsectionworkslist.12 %}
+                                        <li class="bullet_list"><strong class="color-dark">{{ service.firstsectionworkslist.12 }} -</strong> {{ service.firstsectionworkslist.13 }}</li>
+                                    {% endif %}
+                                    {% if service.firstsectionworkslist.14 %}
+                                        <li class="bullet_list"><strong class="color-dark">{{ service.firstsectionworkslist.14 }} -</strong> {{ service.firstsectionworkslist.15 }}</li>
+                                    {% endif %}
+                                    {% if service.firstsectionworkslist.16 %}
+                                        <li class="bullet_list"><strong class="color-dark">{{ service.firstsectionworkslist.16 }} -</strong> {{ service.firstsectionworkslist.17 }}</li>
+                                    {% endif %}
+                                    {% if service.firstsectionworkslist.18 %}
+                                        <li class="bullet_list"><strong class="color-dark">{{ service.firstsectionworkslist.18 }} -</strong> {{ service.firstsectionworkslist.19 }}</li>
+                                    {% endif %}
+                                </ul>
+                            {% if service.firstsectionseconddescription %}
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="cardify text-box bg-gradient m-top-15">
+                                        <p>{{ service.firstsectionseconddescription }}</p>
+                                    </div>
+                                    <br>
+                                    <a class="btn btn-primary" id="quotation_link" href="#quotation">Fale Conosco</a>
+                                </div>
+                            {% else %}
+                                <br>
+                                <a class="btn btn-primary" id="quotation_link" href="#quotation">Fale Conosco</a>
+                                </div>
+                            {% endif %}
+                        {% else %}
+                            <ul class="bullet--list1 m-top-25">
+                                    {% if service.firstsectionworkslist.0 %}
+                                        <li class="bullet_list"><strong class="color-dark">{{ service.firstsectionworkslist.0 }} -</strong> {{ service.firstsectionworkslist.1 }}</li>
+                                    {% endif %}
+                                    {% if service.firstsectionworkslist.2 %}
+                                        <li class="bullet_list"><strong class="color-dark">{{ service.firstsectionworkslist.2 }} -</strong> {{ service.firstsectionworkslist.3 }}</li>
+                                    {% endif %}
+                                    {% if service.firstsectionworkslist.4 %}
+                                        <li class="bullet_list"><strong class="color-dark">{{ service.firstsectionworkslist.4 }} -</strong> {{ service.firstsectionworkslist.5 }}</li>
+                                    {% endif %}
+                                    {% if service.firstsectionworkslist.6 %}
+                                        <li class="bullet_list"><strong class="color-dark">{{ service.firstsectionworkslist.6 }} -</strong> {{ service.firstsectionworkslist.7 }}</li>
+                                    {% endif %}
+                                    {% if service.firstsectionworkslist.8 %}
+                                        <li class="bullet_list"><strong class="color-dark">{{ service.firstsectionworkslist.8 }} -</strong> {{ service.firstsectionworkslist.9 }}</li>
+                                    {% endif %}
+                                    {% if service.firstsectionworkslist.10 %}
+                                        <li class="bullet_list"><strong class="color-dark">{{ service.firstsectionworkslist.10 }} -</strong> {{ service.firstsectionworkslist.11 }}</li>
+                                    {% endif %}
+                                    {% if service.firstsectionworkslist.12 %}
+                                        <li class="bullet_list"><strong class="color-dark">{{ service.firstsectionworkslist.12 }} -</strong> {{ service.firstsectionworkslist.13 }}</li>
+                                    {% endif %}
+                                    {% if service.firstsectionworkslist.14 %}
+                                        <li class="bullet_list"><strong class="color-dark">{{ service.firstsectionworkslist.14 }} -</strong> {{ service.firstsectionworkslist.15 }}</li>
+                                    {% endif %}
+                                    {% if service.firstsectionworkslist.16 %}
+                                        <li class="bullet_list"><strong class="color-dark">{{ service.firstsectionworkslist.16 }} -</strong> {{ service.firstsectionworkslist.17 }}</li>
+                                    {% endif %}
+                                    {% if service.firstsectionworkslist.18 %}
+                                        <li class="bullet_list"><strong class="color-dark">{{ service.firstsectionworkslist.18 }} -</strong> {{ service.firstsectionworkslist.19 }}</li>
+                                    {% endif %}
+                                </ul>
+                            </div><!-- ends: .col-lg-6 -->
+                            <div class="col-lg-6">
+                            {% if service.firstsectionseconddescription %}
+                                <div class="cardify text-box bg-gradient m-top-15">
+                                    <p>{{ service.firstsectionseconddescription }}</p>
+                                </div>            
+                            {% endif %}
+                                <br>
+                                <a class="btn btn-primary" id="quotation_link" href="#quotation">Fale Conosco</a>
+                            </div><!-- ends: .col-lg-6 -->
+                        {% endif %}
+                    </div>
+                </div>
+            </section><!-- ends: section -->
+        {% endif %}
+        {% if service.secondsectiontitle %}
+            {% if service.firstsectiontitleofservice == 'Seguros' %}
+                <section class="section-bg p-top-100 p-bottom-40">
+                    <div class="m-bottom-50 p-left-15 p-right-15">
+                        <div class="divider text-center">
+                            <h1>{{ service.secondsectiontitle }}</h1>
+                            <p class="mx-auto"></p>
+                        </div>
+                    </div>
+                    <div class="icon-boxes icon-box--four">
+                        <div class="filter-wrapper">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="filter-sort">
+                                            <ul id="category_filter">
+                                                <li data-uk-filter="" class="active"> Todos </li>
+                                                <li data-uk-filter="1"> Seguros empresariais </li>
+                                                <li data-uk-filter="2"> Seguros pessoais </li>
+                                            </ul>
+                                        </div><!-- ends: .filter-sort -->
+                                    </div><!-- ends: .col-lg-12 -->
+                                    <div class="col-lg-12">
+                                        <div class="row" data-uk-grid="{controls: '#category_filter'}">
+                                        {% if service.secondsetiontitlesofservicesincludes.0 %}
+                                            <div class="filtr-item col-lg-6 col-md-6" data-uk-filter="1">
+                                                <div class="icon-box-four d-flex">
+                                                    <div class="box-icon">
+                                                        <span class="icon-rounded-sm"><i class="la la-thumbs-up"></i></span>
+                                                    </div>
+                                                    <div class="box-content">
+                                                        <h6>{{ service.secondsetiontitlesofservicesincludes.0 }}</h6>
+                                                        <p style="height: 150px">{{ service.secondsetiondescriptionssofservicesincludes.0 }}</p>
+                                                    </div>
+                                                </div><!-- ends: .icon-box -->
+                                            </div><!-- ends: .col-lg-6 -->
+                                        {% endif %}
+                                        {% if service.secondsetiontitlesofservicesincludes.1 %}
+                                            <div class="filtr-item col-lg-6 col-md-6" data-uk-filter="1">
+                                                <div class="icon-box-four d-flex">
+                                                    <div class="box-icon">
+                                                        <span class="icon-rounded-sm"><i class="la la-bar-chart"></i></span>
+                                                    </div>
+                                                    <div class="box-content">
+                                                        <h6>{{ service.secondsetiontitlesofservicesincludes.1 }}</h6>
+                                                        <p style="height: 150px">{{ service.secondsetiondescriptionssofservicesincludes.1 }}</p>
+                                                    </div>
+                                                </div><!-- ends: .icon-box -->
+                                            </div><!-- ends: .col-lg-6 -->
+                                        {% endif %}
+                                        {% if service.secondsetiontitlesofservicesincludes.2 %}
+                                            <div class="filtr-item col-lg-6 col-md-6" data-uk-filter="1">
+                                                <div class="icon-box-four d-flex">
+                                                    <div class="box-icon">
+                                                        <span class="icon-rounded-sm"><i class="la la-money"></i></span>
+                                                    </div>
+                                                    <div class="box-content">
+                                                        <h6>{{ service.secondsetiontitlesofservicesincludes.2 }}</h6>
+                                                        <p style="height: 150px">{{ service.secondsetiondescriptionssofservicesincludes.2 }}</p>
+                                                    </div>
+                                                </div><!-- ends: .icon-box -->
+                                            </div><!-- ends: .col-lg-6 -->
+                                        {% endif %}
+                                        {% if service.secondsetiontitlesofservicesincludes.3 %}
+                                            <div class="filtr-item col-lg-6 col-md-6" data-uk-filter="1">
+                                                <div class="icon-box-four d-flex">
+                                                    <div class="box-icon">
+                                                        <span class="icon-rounded-sm"><i class="la la-area-chart"></i></span>
+                                                    </div>
+                                                    <div class="box-content">
+                                                        <h6>{{ service.secondsetiontitlesofservicesincludes.3 }}</h6>
+                                                        <p style="height: 150px">{{ service.secondsetiondescriptionssofservicesincludes.3 }}</p>
+                                                    </div>
+                                                </div><!-- ends: .icon-box -->
+                                            </div><!-- ends: .col-lg-6 -->
+                                        {% endif %}
+                                        {% if service.secondsetiontitlesofservicesincludes.4 %}
+                                            <div class="filtr-item col-lg-6 col-md-6" data-uk-filter="1">
+                                                <div class="icon-box-four d-flex">
+                                                    <div class="box-icon">
+                                                        <span class="icon-rounded-sm"><i class="la la-sun-o"></i></span>
+                                                    </div>
+                                                    <div class="box-content">
+                                                        <h6>{{ service.secondsetiontitlesofservicesincludes.4 }}</h6>
+                                                        <p style="height: 150px">{{ service.secondsetiondescriptionssofservicesincludes.4 }}</p>
+                                                    </div>
+                                                </div><!-- ends: .icon-box -->
+                                            </div><!-- ends: .col-lg-6 -->
+                                        {% endif %}
+                                        {% if service.secondsetiontitlesofservicesincludes.5 %}
+                                            <div class="filtr-item col-lg-6 col-md-6" data-uk-filter="1">
+                                                <div class="icon-box-four d-flex">
+                                                    <div class="box-icon">
+                                                        <span class="icon-rounded-sm"><i class="la la-shopping-cart"></i></span>
+                                                    </div>
+                                                    <div class="box-content">
+                                                        <h6>{{ service.secondsetiontitlesofservicesincludes.5 }}</h6>
+                                                        <p style="height: 150px">{{ service.secondsetiondescriptionssofservicesincludes.5 }}</p>
+                                                    </div>
+                                                </div><!-- ends: .icon-box -->
+                                            </div><!-- ends: .col-lg-6 -->
+                                        {% endif %}
+                                        {% if service.secondsetiontitlesofservicesincludes.6 %}
+                                            <div class="filtr-item col-lg-6 col-md-6" data-uk-filter="1">
+                                                <div class="icon-box-four d-flex">
+                                                    <div class="box-icon">
+                                                        <span class="icon-rounded-sm"><i class="la la-shopping-cart"></i></span>
+                                                    </div>
+                                                    <div class="box-content">
+                                                        <h6>{{ service.secondsetiontitlesofservicesincludes.6 }}</h6>
+                                                        <p style="height: 150px">{{ service.secondsetiondescriptionssofservicesincludes.6 }}</p>
+                                                    </div>
+                                                </div><!-- ends: .icon-box -->
+                                            </div><!-- ends: .col-lg-6 -->
+                                        {% endif %}
+                                        {% if service.secondsetiontitlesofservicesincludes.7 %}
+                                            <div class="filtr-item col-lg-6 col-md-6" data-uk-filter="1">
+                                                <div class="icon-box-four d-flex">
+                                                    <div class="box-icon">
+                                                        <span class="icon-rounded-sm"><i class="la la-shopping-cart"></i></span>
+                                                    </div>
+                                                    <div class="box-content">
+                                                        <h6>{{ service.secondsetiontitlesofservicesincludes.7 }}</h6>
+                                                        <p style="height: 150px">{{ service.secondsetiondescriptionssofservicesincludes.7 }}</p>
+                                                    </div>
+                                                </div><!-- ends: .icon-box -->
+                                            </div><!-- ends: .col-lg-6 -->
+                                        {% endif %}
+                                        {% if service.secondsetiontitlesofservicesincludes.8 %}
+                                            <div class="filtr-item col-lg-6 col-md-6" data-uk-filter="1">
+                                                    <div class="icon-box-four d-flex">
+                                                        <div class="box-icon">
+                                                            <span class="icon-rounded-sm"><i class="la la-shopping-cart"></i></span>
+                                                        </div>
+                                                        <div class="box-content">
+                                                            <h6>{{ service.secondsetiontitlesofservicesincludes.8 }}</h6>
+                                                            <p style="height: 150px">{{ service.secondsetiondescriptionssofservicesincludes.8 }}</p>
+                                                        </div>
+                                                    </div><!-- ends: .icon-box -->
+                                                </div><!-- ends: .col-lg-6 -->
+                                            {% endif %}
+                                            {% if service.secondsetiontitlesofservicesincludes.9 %}
+                                                <div class="filtr-item col-lg-6 col-md-6" data-uk-filter="1">
+                                                    <div class="icon-box-four d-flex">
+                                                        <div class="box-icon">
+                                                            <span class="icon-rounded-sm"><i class="la la-shopping-cart"></i></span>
+                                                        </div>
+                                                        <div class="box-content">
+                                                            <h6>{{ service.secondsetiontitlesofservicesincludes.9 }}</h6>
+                                                            <p style="height: 150px">{{ service.secondsetiondescriptionssofservicesincludes.9 }}</p>
+                                                        </div>
+                                                    </div><!-- ends: .icon-box -->
+                                                </div><!-- ends: .col-lg-6 -->
+                                            {% endif %}
+                                            {% if service.secondsetiontitlesofservicesincludes.10 %}
+                                                <div class="filtr-item col-lg-6 col-md-6" data-uk-filter="1">
+                                                    <div class="icon-box-four d-flex">
+                                                        <div class="box-icon">
+                                                            <span class="icon-rounded-sm"><i class="la la-shopping-cart"></i></span>
+                                                        </div>
+                                                        <div class="box-content">
+                                                            <h6>{{ service.secondsetiontitlesofservicesincludes.10 }}</h6>
+                                                            <p style="height: 150px">{{ service.secondsetiondescriptionssofservicesincludes.10 }}</p>
+                                                        </div>
+                                                    </div><!-- ends: .icon-box -->
+                                                </div><!-- ends: .col-lg-6 -->
+                                            {% endif %}
+                                            {% if service.secondsetiontitlesofservicesincludes.11 %}
+                                                <div class="filtr-item col-lg-6 col-md-6" data-uk-filter="1">
+                                                    <div class="icon-box-four d-flex">
+                                                        <div class="box-icon">
+                                                            <span class="icon-rounded-sm"><i class="la la-shopping-cart"></i></span>
+                                                        </div>
+                                                        <div class="box-content">
+                                                            <h6>{{ service.secondsetiontitlesofservicesincludes.11 }}</h6>
+                                                            <p style="height: 150px">{{ service.secondsetiondescriptionssofservicesincludes.11 }}</p>
+                                                        </div>
+                                                    </div><!-- ends: .icon-box -->
+                                                </div><!-- ends: .col-lg-6 -->
+                                            {% endif %}
+                                            {% if service.secondsetiontitlesofservicesincludes.12 %}
+                                                <div class="filtr-item col-lg-6 col-md-6" data-uk-filter="1">
+                                                    <div class="icon-box-four d-flex">
+                                                        <div class="box-icon">
+                                                            <span class="icon-rounded-sm"><i class="la la-shopping-cart"></i></span>
+                                                        </div>
+                                                        <div class="box-content">
+                                                            <h6>{{ service.secondsetiontitlesofservicesincludes.12 }}</h6>
+                                                            <p style="height: 150px">{{ service.secondsetiondescriptionssofservicesincludes.12 }}</p>
+                                                        </div>
+                                                    </div><!-- ends: .icon-box -->
+                                                </div><!-- ends: .col-lg-6 -->
+                                            {% endif %}
+                                            {% if service.secondsetiontitlesofservicesincludes.13 %}
+                                                <div class="filtr-item col-lg-6 col-md-6" data-uk-filter="1">
+                                                    <div class="icon-box-four d-flex">
+                                                        <div class="box-icon">
+                                                            <span class="icon-rounded-sm"><i class="la la-shopping-cart"></i></span>
+                                                        </div>
+                                                        <div class="box-content">
+                                                            <h6>{{ service.secondsetiontitlesofservicesincludes.13 }}</h6>
+                                                            <p style="height: 150px">{{ service.secondsetiondescriptionssofservicesincludes.13 }}</p>
+                                                        </div>
+                                                    </div><!-- ends: .icon-box -->
+                                                </div><!-- ends: .col-lg-6 -->
+                                            {% endif %}
+                                            {% if service.secondsetiontitlesofservicesincludes.14 %}
+                                                <div class="filtr-item col-lg-6 col-md-6" data-uk-filter="1">
+                                                    <div class="icon-box-four d-flex">
+                                                        <div class="box-icon">
+                                                            <span class="icon-rounded-sm"><i class="la la-shopping-cart"></i></span>
+                                                        </div>
+                                                        <div class="box-content">
+                                                            <h6>{{ service.secondsetiontitlesofservicesincludes.14 }}</h6>
+                                                            <p style="height: 150px">{{ service.secondsetiondescriptionssofservicesincludes.14 }}</p>
+                                                        </div>
+                                                    </div><!-- ends: .icon-box -->
+                                                </div><!-- ends: .col-lg-6 -->
+                                            {% endif %}
+                                            {% if service.secondsetiontitlesofservicesincludes.15 %}
+                                                <div class="filtr-item col-lg-6 col-md-6" data-uk-filter="2">
+                                                    <div class="icon-box-four d-flex">
+                                                        <div class="box-icon">
+                                                            <span class="icon-rounded-sm"><i class="la la-shopping-cart"></i></span>
+                                                        </div>
+                                                        <div class="box-content">
+                                                            <h6>{{ service.secondsetiontitlesofservicesincludes.15 }}</h6>
+                                                            <p style="height: 150px">{{ service.secondsetiondescriptionssofservicesincludes.15 }}</p>
+                                                        </div>
+                                                    </div><!-- ends: .icon-box -->
+                                                </div><!-- ends: .col-lg-6 -->
+                                            {% endif %}
+                                            {% if service.secondsetiontitlesofservicesincludes.16 %}
+                                                <div class="filtr-item col-lg-6 col-md-6" data-uk-filter="2">
+                                                    <div class="icon-box-four d-flex">
+                                                        <div class="box-icon">
+                                                            <span class="icon-rounded-sm"><i class="la la-shopping-cart"></i></span>
+                                                        </div>
+                                                        <div class="box-content">
+                                                            <h6>{{ service.secondsetiontitlesofservicesincludes.16 }}</h6>
+                                                            <p style="height: 150px">{{ service.secondsetiondescriptionssofservicesincludes.16 }}</p>
+                                                        </div>
+                                                    </div><!-- ends: .icon-box -->
+                                                </div><!-- ends: .col-lg-6 -->
+                                            {% endif %}
+                                            {% if service.secondsetiontitlesofservicesincludes.17 %}
+                                                <div class="filtr-item col-lg-6 col-md-6" data-uk-filter="2">
+                                                    <div class="icon-box-four d-flex">
+                                                        <div class="box-icon">
+                                                            <span class="icon-rounded-sm"><i class="la la-shopping-cart"></i></span>
+                                                        </div>
+                                                        <div class="box-content">
+                                                            <h6>{{ service.secondsetiontitlesofservicesincludes.17 }}</h6>
+                                                            <p style="height: 150px">{{ service.secondsetiondescriptionssofservicesincludes.17 }}</p>
+                                                        </div>
+                                                    </div><!-- ends: .icon-box -->
+                                                </div><!-- ends: .col-lg-6 -->
+                                            {% endif %}
+                                            {% if service.secondsetiontitlesofservicesincludes.18 %}
+                                                <div class="filtr-item col-lg-6 col-md-6" data-uk-filter="2">
+                                                    <div class="icon-box-four d-flex">
+                                                        <div class="box-icon">
+                                                            <span class="icon-rounded-sm"><i class="la la-shopping-cart"></i></span>
+                                                        </div>
+                                                        <div class="box-content">
+                                                            <h6>{{ service.secondsetiontitlesofservicesincludes.18 }}</h6>
+                                                            <p style="height: 150px">{{ service.secondsetiondescriptionssofservicesincludes.18 }}</p>
+                                                        </div>
+                                                    </div><!-- ends: .icon-box -->
+                                                </div><!-- ends: .col-lg-6 -->
+                                            {% endif %}
+                                            {% if service.secondsetiontitlesofservicesincludes.19 %}
+                                                <div class="filtr-item col-lg-6 col-md-6" data-uk-filter="2">
+                                                    <div class="icon-box-four d-flex">
+                                                        <div class="box-icon">
+                                                            <span class="icon-rounded-sm"><i class="la la-shopping-cart"></i></span>
+                                                        </div>
+                                                        <div class="box-content">
+                                                            <h6>{{ service.secondsetiontitlesofservicesincludes.19 }}</h6>
+                                                            <p style="height: 150px">{{ service.secondsetiondescriptionssofservicesincludes.19 }}</p>
+                                                        </div>
+                                                    </div><!-- ends: .icon-box -->
+                                                </div><!-- ends: .col-lg-6 -->
+                                            {% endif %}
+                                            {% if service.secondsetiontitlesofservicesincludes.20 %}
+                                                <div class="filtr-item col-lg-6 col-md-6" data-uk-filter="2">
+                                                    <div class="icon-box-four d-flex">
+                                                        <div class="box-icon">
+                                                            <span class="icon-rounded-sm"><i class="la la-shopping-cart"></i></span>
+                                                        </div>
+                                                        <div class="box-content">
+                                                            <h6>{{ service.secondsetiontitlesofservicesincludes.20 }}</h6>
+                                                            <p style="height: 150px">{{ service.secondsetiondescriptionssofservicesincludes.20 }}</p>
+                                                        </div>
+                                                    </div><!-- ends: .icon-box -->
+                                                </div><!-- ends: .col-lg-6 -->
+                                            {% endif %}
+                                            {% if service.secondsetiontitlesofservicesincludes.21 %}
+                                                <div class="filtr-item col-lg-6 col-md-6" data-uk-filter="2">
+                                                    <div class="icon-box-four d-flex">
+                                                        <div class="box-icon">
+                                                            <span class="icon-rounded-sm"><i class="la la-shopping-cart"></i></span>
+                                                        </div>
+                                                        <div class="box-content">
+                                                            <h6>{{ service.secondsetiontitlesofservicesincludes.21 }}</h6>
+                                                            <p style="height: 150px">{{ service.secondsetiondescriptionssofservicesincludes.21 }}</p>
+                                                        </div>
+                                                    </div><!-- ends: .icon-box -->
+                                                </div><!-- ends: .col-lg-6 -->
+                                            {% endif %}
+                                            {% if service.secondsetiontitlesofservicesincludes.22 %}
+                                                <div class="filtr-item col-lg-6 col-md-6" data-uk-filter="2">
+                                                    <div class="icon-box-four d-flex">
+                                                        <div class="box-icon">
+                                                            <span class="icon-rounded-sm"><i class="la la-shopping-cart"></i></span>
+                                                        </div>
+                                                        <div class="box-content">
+                                                            <h6>{{ service.secondsetiontitlesofservicesincludes.22 }}</h6>
+                                                            <p style="height: 150px">{{ service.secondsetiondescriptionssofservicesincludes.22 }}</p>
+                                                        </div>
+                                                    </div><!-- ends: .icon-box -->
+                                                </div><!-- ends: .col-lg-6 -->
+                                            {% endif %}
+                                            {% if service.secondsetiontitlesofservicesincludes.23 %}
+                                                <div class="filtr-item col-lg-6 col-md-6" data-uk-filter="2">
+                                                    <div class="icon-box-four d-flex">
+                                                        <div class="box-icon">
+                                                            <span class="icon-rounded-sm"><i class="la la-shopping-cart"></i></span>
+                                                        </div>
+                                                        <div class="box-content">
+                                                            <h6>{{ service.secondsetiontitlesofservicesincludes.23 }}</h6>
+                                                            <p style="height: 150px">{{ service.secondsetiondescriptionssofservicesincludes.23 }}</p>
+                                                        </div>
+                                                    </div><!-- ends: .icon-box -->
+                                                </div><!-- ends: .col-lg-6 -->
+                                            {% endif %}
+                                            {% if service.secondsetiontitlesofservicesincludes.24 %}
+                                                <div class="filtr-item col-lg-6 col-md-6" data-uk-filter="2">
+                                                    <div class="icon-box-four d-flex">
+                                                        <div class="box-icon">
+                                                            <span class="icon-rounded-sm"><i class="la la-shopping-cart"></i></span>
+                                                        </div>
+                                                        <div class="box-content">
+                                                            <h6>{{ service.secondsetiontitlesofservicesincludes.24 }}</h6>
+                                                            <p style="height: 150px">{{ service.secondsetiondescriptionssofservicesincludes.24 }}</p>
+                                                        </div>
+                                                    </div><!-- ends: .icon-box -->
+                                                </div><!-- ends: .col-lg-6 -->
+                                            {% endif %}
+                                            {% if service.secondsetiontitlesofservicesincludes.25 %}
+                                                <div class="filtr-item col-lg-6 col-md-6" data-uk-filter="2">
+                                                    <div class="icon-box-four d-flex">
+                                                        <div class="box-icon">
+                                                            <span class="icon-rounded-sm"><i class="la la-shopping-cart"></i></span>
+                                                        </div>
+                                                        <div class="box-content">
+                                                            <h6>{{ service.secondsetiontitlesofservicesincludes.25 }}</h6>
+                                                            <p style="height: 150px">{{ service.secondsetiondescriptionssofservicesincludes.25 }}</p>
+                                                        </div>
+                                                    </div><!-- ends: .icon-box -->
+                                                </div><!-- ends: .col-lg-6 -->
+                                            {% endif %}
+                                            {% if service.secondsetiontitlesofservicesincludes.26 %}
+                                                <div class="filtr-item col-lg-6 col-md-6" data-uk-filter="2">
+                                                    <div class="icon-box-four d-flex">
+                                                        <div class="box-icon">
+                                                            <span class="icon-rounded-sm"><i class="la la-shopping-cart"></i></span>
+                                                        </div>
+                                                        <div class="box-content">
+                                                            <h6>{{ service.secondsetiontitlesofservicesincludes.26 }}</h6>
+                                                            <p style="height: 150px">{{ service.secondsetiondescriptionssofservicesincludes.26 }}</p>
+                                                        </div>
+                                                    </div><!-- ends: .icon-box -->
+                                                </div><!-- ends: .col-lg-6 -->
+                                            {% endif %}
+                                            {% if service.secondsetiontitlesofservicesincludes.27 %}
+                                                <div class="filtr-item col-lg-6 col-md-6" data-uk-filter="2">
+                                                    <div class="icon-box-four d-flex">
+                                                        <div class="box-icon">
+                                                            <span class="icon-rounded-sm"><i class="la la-shopping-cart"></i></span>
+                                                        </div>
+                                                        <div class="box-content">
+                                                            <h6>{{ service.secondsetiontitlesofservicesincludes.27 }}</h6>
+                                                            <p style="height: 150px">{{ service.secondsetiondescriptionssofservicesincludes.27 }}</p>
+                                                        </div>
+                                                    </div><!-- ends: .icon-box -->
+                                                </div><!-- ends: .col-lg-6 -->
+                                            {% endif %}
+                                            {% if service.secondsetiontitlesofservicesincludes.28 %}
+                                                <div class="filtr-item col-lg-6 col-md-6" data-uk-filter="2">
+                                                    <div class="icon-box-four d-flex">
+                                                        <div class="box-icon">
+                                                            <span class="icon-rounded-sm"><i class="la la-shopping-cart"></i></span>
+                                                        </div>
+                                                        <div class="box-content">
+                                                            <h6>{{ service.secondsetiontitlesofservicesincludes.28 }}</h6>
+                                                            <p style="height: 150px">{{ service.secondsetiondescriptionssofservicesincludes.28 }}</p>
+                                                        </div>
+                                                    </div><!-- ends: .icon-box -->
+                                                </div><!-- ends: .col-lg-6 -->
+                                            {% endif %}
+                                            {% if service.secondsetiontitlesofservicesincludes.29 %}
+                                                <div class="filtr-item col-lg-6 col-md-6" data-uk-filter="2">
+                                                    <div class="icon-box-four d-flex">
+                                                        <div class="box-icon">
+                                                            <span class="icon-rounded-sm"><i class="la la-shopping-cart"></i></span>
+                                                        </div>
+                                                        <div class="box-content">
+                                                            <h6>{{ service.secondsetiontitlesofservicesincludes.29 }}</h6>
+                                                            <p style="height: 150px">{{ service.secondsetiondescriptionssofservicesincludes.29 }}</p>
+                                                        </div>
+                                                    </div><!-- ends: .icon-box -->
+                                                </div><!-- ends: .col-lg-6 -->
+                                            {% endif %}
+                                            {% if service.secondsetiontitlesofservicesincludes.30 %}
+                                                <div class="filtr-item col-lg-6 col-md-6" data-uk-filter="2">
+                                                    <div class="icon-box-four d-flex">
+                                                        <div class="box-icon">
+                                                            <span class="icon-rounded-sm"><i class="la la-shopping-cart"></i></span>
+                                                        </div>
+                                                        <div class="box-content">
+                                                            <h6>{{ service.secondsetiontitlesofservicesincludes.30 }}</h6>
+                                                            <p style="height: 150px">{{ service.secondsetiondescriptionssofservicesincludes.30 }}</p>
+                                                        </div>
+                                                    </div><!-- ends: .icon-box -->
+                                                </div><!-- ends: .col-lg-6 -->
+                                            {% endif %}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-center">
+                                        <br>
+                                        <a class="btn btn-primary" id="quotation_link" href="#quotation">Fale Conosco</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- ends: .icon-boxes -->
+                    </section><!-- ends: section -->
+            {% else %}
+                    <section class="section-bg p-top-100 p-bottom-40">
+                        <div class="m-bottom-50 p-left-15 p-right-15">
+                            <div class="divider text-center">
+                                <h1>{{ service.secondsectiontitle }}</h1>
+                                <p class="mx-auto"></p>
+                            </div>
+                        </div>
+                        <div class="icon-boxes icon-box--four">
+                            <div class="container">
+                                <div class="row">
+                                    {% if service.secondsetiontitlesofservicesincludes.0 %}
+                                        <div class="col-lg-6 col-md-6">
+                                            <div class="icon-box-four d-flex">
+                                                <div class="box-icon">
+                                                    <span class="icon-rounded-sm"><i class="la la-thumbs-up"></i></span>
+                                                </div>
+                                                <div class="box-content">
+                                                    <h6>{{ service.secondsetiontitlesofservicesincludes.0 }}</h6>
+                                                    <p>{{ service.secondsetiondescriptionssofservicesincludes.0 }}</p>
+                                                </div>
+                                            </div><!-- ends: .icon-box -->
+                                        </div><!-- ends: .col-lg-6 -->
+                                    {% endif %}
+                                    {% if service.secondsetiontitlesofservicesincludes.1 %}
+                                        <div class="col-lg-6 col-md-6">
+                                            <div class="icon-box-four d-flex">
+                                                <div class="box-icon">
+                                                    <span class="icon-rounded-sm"><i class="la la-bar-chart"></i></span>
+                                                </div>
+                                                <div class="box-content">
+                                                    <h6>{{ service.secondsetiontitlesofservicesincludes.1 }}</h6>
+                                                    <p>{{ service.secondsetiondescriptionssofservicesincludes.1 }}</p>
+                                                </div>
+                                            </div><!-- ends: .icon-box -->
+                                        </div><!-- ends: .col-lg-6 -->
+                                    {% endif %}
+                                    {% if service.secondsetiontitlesofservicesincludes.2 %}
+                                        <div class="col-lg-6 col-md-6">
+                                            <div class="icon-box-four d-flex">
+                                                <div class="box-icon">
+                                                    <span class="icon-rounded-sm"><i class="la la-money"></i></span>
+                                                </div>
+                                                <div class="box-content">
+                                                    <h6>{{ service.secondsetiontitlesofservicesincludes.2 }}</h6>
+                                                    <p>{{ service.secondsetiondescriptionssofservicesincludes.2 }}</p>
+                                                </div>
+                                            </div><!-- ends: .icon-box -->
+                                        </div><!-- ends: .col-lg-6 -->
+                                    {% endif %}
+                                    {% if service.secondsetiontitlesofservicesincludes.3 %}
+                                        <div class="col-lg-6 col-md-6">
+                                            <div class="icon-box-four d-flex">
+                                                <div class="box-icon">
+                                                    <span class="icon-rounded-sm"><i class="la la-area-chart"></i></span>
+                                                </div>
+                                                <div class="box-content">
+                                                    <h6>{{ service.secondsetiontitlesofservicesincludes.3 }}</h6>
+                                                    <p>{{ service.secondsetiondescriptionssofservicesincludes.3 }}</p>
+                                                </div>
+                                            </div><!-- ends: .icon-box -->
+                                        </div><!-- ends: .col-lg-6 -->
+                                    {% endif %}
+                                    {% if service.secondsetiontitlesofservicesincludes.4 %}
+                                        <div class="col-lg-6 col-md-6">
+                                            <div class="icon-box-four d-flex">
+                                                <div class="box-icon">
+                                                    <span class="icon-rounded-sm"><i class="la la-sun-o"></i></span>
+                                                </div>
+                                                <div class="box-content">
+                                                    <h6>{{ service.secondsetiontitlesofservicesincludes.4 }}</h6>
+                                                    <p>{{ service.secondsetiondescriptionssofservicesincludes.4 }}</p>
+                                                </div>
+                                            </div><!-- ends: .icon-box -->
+                                        </div><!-- ends: .col-lg-6 -->
+                                    {% endif %}
+                                    {% if service.secondsetiontitlesofservicesincludes.5 %}
+                                        <div class="col-lg-6 col-md-6">
+                                            <div class="icon-box-four d-flex">
+                                                <div class="box-icon">
+                                                    <span class="icon-rounded-sm"><i class="la la-shopping-cart"></i></span>
+                                                </div>
+                                                <div class="box-content">
+                                                    <h6>{{ service.secondsetiontitlesofservicesincludes.5 }}</h6>
+                                                    <p>{{ service.secondsetiondescriptionssofservicesincludes.5 }}</p>
+                                                </div>
+                                            </div><!-- ends: .icon-box -->
+                                        </div><!-- ends: .col-lg-6 -->
+                                    {% endif %}
+                                    {% if service.secondsetiontitlesofservicesincludes.6 %}
+                                        <div class="col-lg-6 col-md-6">
+                                            <div class="icon-box-four d-flex">
+                                                <div class="box-icon">
+                                                    <span class="icon-rounded-sm"><i class="la la-shopping-cart"></i></span>
+                                                </div>
+                                                <div class="box-content">
+                                                    <h6>{{ service.secondsetiontitlesofservicesincludes.6 }}</h6>
+                                                    <p>{{ service.secondsetiondescriptionssofservicesincludes.6 }}</p>
+                                                </div>
+                                            </div><!-- ends: .icon-box -->
+                                        </div><!-- ends: .col-lg-6 -->
+                                    {% endif %}
+                                    {% if service.secondsetiontitlesofservicesincludes.7 %}
+                                        <div class="col-lg-6 col-md-6">
+                                            <div class="icon-box-four d-flex">
+                                                <div class="box-icon">
+                                                    <span class="icon-rounded-sm"><i class="la la-shopping-cart"></i></span>
+                                                </div>
+                                                <div class="box-content">
+                                                    <h6>{{ service.secondsetiontitlesofservicesincludes.7 }}</h6>
+                                                    <p>{{ service.secondsetiondescriptionssofservicesincludes.7 }}</p>
+                                                </div>
+                                            </div><!-- ends: .icon-box -->
+                                        </div><!-- ends: .col-lg-6 -->
+                                    {% endif %}
+                                    {% if service.secondsetiontitlesofservicesincludes.8 %}
+                                        <div class="col-lg-6 col-md-6">
+                                            <div class="icon-box-four d-flex">
+                                                <div class="box-icon">
+                                                    <span class="icon-rounded-sm"><i class="la la-shopping-cart"></i></span>
+                                                </div>
+                                                <div class="box-content">
+                                                    <h6>{{ service.secondsetiontitlesofservicesincludes.8 }}</h6>
+                                                    <p>{{ service.secondsetiondescriptionssofservicesincludes.8 }}</p>
+                                                </div>
+                                            </div><!-- ends: .icon-box -->
+                                        </div><!-- ends: .col-lg-6 -->
+                                    {% endif %}
+                                    {% if service.secondsetiontitlesofservicesincludes.9 %}
+                                        <div class="col-lg-6 col-md-6">
+                                            <div class="icon-box-four d-flex">
+                                                <div class="box-icon">
+                                                    <span class="icon-rounded-sm"><i class="la la-shopping-cart"></i></span>
+                                                </div>
+                                                <div class="box-content">
+                                                    <h6>{{ service.secondsetiontitlesofservicesincludes.9 }}</h6>
+                                                    <p>{{ service.secondsetiondescriptionssofservicesincludes.9 }}</p>
+                                                </div>
+                                            </div><!-- ends: .icon-box -->
+                                        </div><!-- ends: .col-lg-6 -->
+                                    {% endif %}
+                                    {% if service.secondsetiontitlesofservicesincludes.10 %}
+                                        <div class="col-lg-6 col-md-6">
+                                            <div class="icon-box-four d-flex">
+                                                <div class="box-icon">
+                                                    <span class="icon-rounded-sm"><i class="la la-shopping-cart"></i></span>
+                                                </div>
+                                                <div class="box-content">
+                                                    <h6>{{ service.secondsetiontitlesofservicesincludes.10 }}</h6>
+                                                    <p>{{ service.secondsetiondescriptionssofservicesincludes.10 }}</p>
+                                                </div>
+                                            </div><!-- ends: .icon-box -->
+                                        </div><!-- ends: .col-lg-6 -->
+                                    {% endif %}
+                                    {% if service.secondsetiontitlesofservicesincludes.11 %}
+                                        <div class="col-lg-6 col-md-6">
+                                            <div class="icon-box-four d-flex">
+                                                <div class="box-icon">
+                                                    <span class="icon-rounded-sm"><i class="la la-shopping-cart"></i></span>
+                                                </div>
+                                                <div class="box-content">
+                                                    <h6>{{ service.secondsetiontitlesofservicesincludes.11 }}</h6>
+                                                    <p>{{ service.secondsetiondescriptionssofservicesincludes.11 }}</p>
+                                                </div>
+                                            </div><!-- ends: .icon-box -->
+                                        </div><!-- ends: .col-lg-6 -->
+                                    {% endif %}
+                                    {% if service.secondsetiontitlesofservicesincludes.12 %}
+                                        <div class="col-lg-6 col-md-6">
+                                            <div class="icon-box-four d-flex">
+                                                <div class="box-icon">
+                                                    <span class="icon-rounded-sm"><i class="la la-shopping-cart"></i></span>
+                                                </div>
+                                                <div class="box-content">
+                                                    <h6>{{ service.secondsetiontitlesofservicesincludes.12 }}</h6>
+                                                    <p>{{ service.secondsetiondescriptionssofservicesincludes.12 }}</p>
+                                                </div>
+                                            </div><!-- ends: .icon-box -->
+                                        </div><!-- ends: .col-lg-6 -->
+                                    {% endif %}
+                                    {% if service.secondsetiontitlesofservicesincludes.13 %}
+                                        <div class="col-lg-6 col-md-6">
+                                            <div class="icon-box-four d-flex">
+                                                <div class="box-icon">
+                                                    <span class="icon-rounded-sm"><i class="la la-shopping-cart"></i></span>
+                                                </div>
+                                                <div class="box-content">
+                                                    <h6>{{ service.secondsetiontitlesofservicesincludes.13 }}</h6>
+                                                    <p>{{ service.secondsetiondescriptionssofservicesincludes.13 }}</p>
+                                                </div>
+                                            </div><!-- ends: .icon-box -->
+                                        </div><!-- ends: .col-lg-6 -->
+                                    {% endif %}
+                                    {% if service.secondsetiontitlesofservicesincludes.14 %}
+                                        <div class="col-lg-6 col-md-6">
+                                            <div class="icon-box-four d-flex">
+                                                <div class="box-icon">
+                                                    <span class="icon-rounded-sm"><i class="la la-shopping-cart"></i></span>
+                                                </div>
+                                                <div class="box-content">
+                                                    <h6>{{ service.secondsetiontitlesofservicesincludes.14 }}</h6>
+                                                    <p>{{ service.secondsetiondescriptionssofservicesincludes.14 }}</p>
+                                                </div>
+                                            </div><!-- ends: .icon-box -->
+                                        </div><!-- ends: .col-lg-6 -->
+                                    {% endif %}
+                                    {% if service.secondsetiontitlesofservicesincludes.15 %}
+                                        <div class="col-lg-6 col-md-6">
+                                            <div class="icon-box-four d-flex">
+                                                <div class="box-icon">
+                                                    <span class="icon-rounded-sm"><i class="la la-shopping-cart"></i></span>
+                                                </div>
+                                                <div class="box-content">
+                                                    <h6>{{ service.secondsetiontitlesofservicesincludes.15 }}</h6>
+                                                    <p>{{ service.secondsetiondescriptionssofservicesincludes.15 }}</p>
+                                                </div>
+                                            </div><!-- ends: .icon-box -->
+                                        </div><!-- ends: .col-lg-6 -->
+                                    {% endif %}
+                                    {% if service.secondsetiontitlesofservicesincludes.16 %}
+                                        <div class="col-lg-6 col-md-6">
+                                            <div class="icon-box-four d-flex">
+                                                <div class="box-icon">
+                                                    <span class="icon-rounded-sm"><i class="la la-shopping-cart"></i></span>
+                                                </div>
+                                                <div class="box-content">
+                                                    <h6>{{ service.secondsetiontitlesofservicesincludes.16 }}</h6>
+                                                    <p>{{ service.secondsetiondescriptionssofservicesincludes.16 }}</p>
+                                                </div>
+                                            </div><!-- ends: .icon-box -->
+                                        </div><!-- ends: .col-lg-6 -->
+                                    {% endif %}
+                                    {% if service.secondsetiontitlesofservicesincludes.17 %}
+                                        <div class="col-lg-6 col-md-6">
+                                            <div class="icon-box-four d-flex">
+                                                <div class="box-icon">
+                                                    <span class="icon-rounded-sm"><i class="la la-shopping-cart"></i></span>
+                                                </div>
+                                                <div class="box-content">
+                                                    <h6>{{ service.secondsetiontitlesofservicesincludes.17 }}</h6>
+                                                    <p>{{ service.secondsetiondescriptionssofservicesincludes.17 }}</p>
+                                                </div>
+                                            </div><!-- ends: .icon-box -->
+                                        </div><!-- ends: .col-lg-6 -->
+                                    {% endif %}
+                                    {% if service.secondsetiontitlesofservicesincludes.18 %}
+                                        <div class="col-lg-6 col-md-6">
+                                            <div class="icon-box-four d-flex">
+                                                <div class="box-icon">
+                                                    <span class="icon-rounded-sm"><i class="la la-shopping-cart"></i></span>
+                                                </div>
+                                                <div class="box-content">
+                                                    <h6>{{ service.secondsetiontitlesofservicesincludes.18 }}</h6>
+                                                    <p>{{ service.secondsetiondescriptionssofservicesincludes.18 }}</p>
+                                                </div>
+                                            </div><!-- ends: .icon-box -->
+                                        </div><!-- ends: .col-lg-6 -->
+                                    {% endif %}
+                                    {% if service.secondsetiontitlesofservicesincludes.19 %}
+                                        <div class="col-lg-6 col-md-6">
+                                            <div class="icon-box-four d-flex">
+                                                <div class="box-icon">
+                                                    <span class="icon-rounded-sm"><i class="la la-shopping-cart"></i></span>
+                                                </div>
+                                                <div class="box-content">
+                                                    <h6>{{ service.secondsetiontitlesofservicesincludes.19 }}</h6>
+                                                    <p>{{ service.secondsetiondescriptionssofservicesincludes.19 }}</p>
+                                                </div>
+                                            </div><!-- ends: .icon-box -->
+                                        </div><!-- ends: .col-lg-6 -->
+                                    {% endif %}
+                                    {% if service.secondsetiontitlesofservicesincludes.20 %}
+                                        <div class="col-lg-6 col-md-6">
+                                            <div class="icon-box-four d-flex">
+                                                <div class="box-icon">
+                                                    <span class="icon-rounded-sm"><i class="la la-shopping-cart"></i></span>
+                                                </div>
+                                                <div class="box-content">
+                                                    <h6>{{ service.secondsetiontitlesofservicesincludes.20 }}</h6>
+                                                    <p>{{ service.secondsetiondescriptionssofservicesincludes.20 }}</p>
+                                                </div>
+                                            </div><!-- ends: .icon-box -->
+                                        </div><!-- ends: .col-lg-6 -->
+                                    {% endif %}
+                                    {% if service.secondsetiontitlesofservicesincludes.21 %}
+                                        <div class="col-lg-6 col-md-6">
+                                            <div class="icon-box-four d-flex">
+                                                <div class="box-icon">
+                                                    <span class="icon-rounded-sm"><i class="la la-shopping-cart"></i></span>
+                                                </div>
+                                                <div class="box-content">
+                                                    <h6>{{ service.secondsetiontitlesofservicesincludes.21 }}</h6>
+                                                    <p>{{ service.secondsetiondescriptionssofservicesincludes.21 }}</p>
+                                                </div>
+                                            </div><!-- ends: .icon-box -->
+                                        </div><!-- ends: .col-lg-6 -->
+                                    {% endif %}
+                                    {% if service.secondsetiontitlesofservicesincludes.22 %}
+                                        <div class="col-lg-6 col-md-6">
+                                            <div class="icon-box-four d-flex">
+                                                <div class="box-icon">
+                                                    <span class="icon-rounded-sm"><i class="la la-shopping-cart"></i></span>
+                                                </div>
+                                                <div class="box-content">
+                                                    <h6>{{ service.secondsetiontitlesofservicesincludes.22 }}</h6>
+                                                    <p>{{ service.secondsetiondescriptionssofservicesincludes.22 }}</p>
+                                                </div>
+                                            </div><!-- ends: .icon-box -->
+                                        </div><!-- ends: .col-lg-6 -->
+                                    {% endif %}
+                                    {% if service.secondsetiontitlesofservicesincludes.23 %}
+                                        <div class="col-lg-6 col-md-6">
+                                            <div class="icon-box-four d-flex">
+                                                <div class="box-icon">
+                                                    <span class="icon-rounded-sm"><i class="la la-shopping-cart"></i></span>
+                                                </div>
+                                                <div class="box-content">
+                                                    <h6>{{ service.secondsetiontitlesofservicesincludes.23 }}</h6>
+                                                    <p>{{ service.secondsetiondescriptionssofservicesincludes.23 }}</p>
+                                                </div>
+                                            </div><!-- ends: .icon-box -->
+                                        </div><!-- ends: .col-lg-6 -->
+                                    {% endif %}
+                                    {% if service.secondsetiontitlesofservicesincludes.24 %}
+                                        <div class="col-lg-6 col-md-6">
+                                            <div class="icon-box-four d-flex">
+                                                <div class="box-icon">
+                                                    <span class="icon-rounded-sm"><i class="la la-shopping-cart"></i></span>
+                                                </div>
+                                                <div class="box-content">
+                                                    <h6>{{ service.secondsetiontitlesofservicesincludes.24 }}</h6>
+                                                    <p>{{ service.secondsetiondescriptionssofservicesincludes.24 }}</p>
+                                                </div>
+                                            </div><!-- ends: .icon-box -->
+                                        </div><!-- ends: .col-lg-6 -->
+                                    {% endif %}
+                                    {% if service.secondsetiontitlesofservicesincludes.25 %}
+                                        <div class="col-lg-6 col-md-6">
+                                            <div class="icon-box-four d-flex">
+                                                <div class="box-icon">
+                                                    <span class="icon-rounded-sm"><i class="la la-shopping-cart"></i></span>
+                                                </div>
+                                                <div class="box-content">
+                                                    <h6>{{ service.secondsetiontitlesofservicesincludes.25 }}</h6>
+                                                    <p>{{ service.secondsetiondescriptionssofservicesincludes.25 }}</p>
+                                                </div>
+                                            </div><!-- ends: .icon-box -->
+                                        </div><!-- ends: .col-lg-6 -->
+                                    {% endif %}
+                                    {% if service.secondsetiontitlesofservicesincludes.26 %}
+                                        <div class="col-lg-6 col-md-6">
+                                            <div class="icon-box-four d-flex">
+                                                <div class="box-icon">
+                                                    <span class="icon-rounded-sm"><i class="la la-shopping-cart"></i></span>
+                                                </div>
+                                                <div class="box-content">
+                                                    <h6>{{ service.secondsetiontitlesofservicesincludes.26 }}</h6>
+                                                    <p>{{ service.secondsetiondescriptionssofservicesincludes.26 }}</p>
+                                                </div>
+                                            </div><!-- ends: .icon-box -->
+                                        </div><!-- ends: .col-lg-6 -->
+                                    {% endif %}
+                                    {% if service.secondsetiontitlesofservicesincludes.27 %}
+                                        <div class="col-lg-6 col-md-6">
+                                            <div class="icon-box-four d-flex">
+                                                <div class="box-icon">
+                                                    <span class="icon-rounded-sm"><i class="la la-shopping-cart"></i></span>
+                                                </div>
+                                                <div class="box-content">
+                                                    <h6>{{ service.secondsetiontitlesofservicesincludes.27 }}</h6>
+                                                    <p>{{ service.secondsetiondescriptionssofservicesincludes.27 }}</p>
+                                                </div>
+                                            </div><!-- ends: .icon-box -->
+                                        </div><!-- ends: .col-lg-6 -->
+                                    {% endif %}
+                                    {% if service.secondsetiontitlesofservicesincludes.28 %}
+                                        <div class="col-lg-6 col-md-6">
+                                            <div class="icon-box-four d-flex">
+                                                <div class="box-icon">
+                                                    <span class="icon-rounded-sm"><i class="la la-shopping-cart"></i></span>
+                                                </div>
+                                                <div class="box-content">
+                                                    <h6>{{ service.secondsetiontitlesofservicesincludes.28 }}</h6>
+                                                    <p>{{ service.secondsetiondescriptionssofservicesincludes.28 }}</p>
+                                                </div>
+                                            </div><!-- ends: .icon-box -->
+                                        </div><!-- ends: .col-lg-6 -->
+                                    {% endif %}
+                                    {% if service.secondsetiontitlesofservicesincludes.29 %}
+                                        <div class="col-lg-6 col-md-6">
+                                            <div class="icon-box-four d-flex">
+                                                <div class="box-icon">
+                                                    <span class="icon-rounded-sm"><i class="la la-shopping-cart"></i></span>
+                                                </div>
+                                                <div class="box-content">
+                                                    <h6>{{ service.secondsetiontitlesofservicesincludes.29 }}</h6>
+                                                    <p>{{ service.secondsetiondescriptionssofservicesincludes.29 }}</p>
+                                                </div>
+                                            </div><!-- ends: .icon-box -->
+                                        </div><!-- ends: .col-lg-6 -->
+                                    {% endif %}
+                                    {% if service.secondsetiontitlesofservicesincludes.30 %}
+                                        <div class="col-lg-6 col-md-6">
+                                            <div class="icon-box-four d-flex">
+                                                <div class="box-icon">
+                                                    <span class="icon-rounded-sm"><i class="la la-shopping-cart"></i></span>
+                                                </div>
+                                                <div class="box-content">
+                                                    <h6>{{ service.secondsetiontitlesofservicesincludes.30 }}</h6>
+                                                    <p>{{ service.secondsetiondescriptionssofservicesincludes.30 }}</p>
+                                                </div>
+                                            </div><!-- ends: .icon-box -->
+                                        </div><!-- ends: .col-lg-6 -->
+                                    {% endif %}
+                                </div>
+                                <div class="text-center">
+                                    <br>
+                                    <a class="btn btn-primary" id="quotation_link" href="#quotation">Fale Conosco</a>
+                                </div>
+                            </div>
+                        </div><!-- ends: .icon-boxes -->
+                    </section><!-- ends: section -->
+                {% endif %}
+        {% endif %}
+        {% if service.thirdsectiontitle %}
+                <section class="p-top-100 p-bottom-110">
+                    <div class="m-bottom-50 p-left-15 p-right-15">
+                        <div class="divider text-center">
+                            <h1>{{ service.thirdsectiontitle }}</h1>
+                            <p class="mx-auto"></p>
+                        </div>
+                    </div>
+                    <div class="accordion-styles accordion--one">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="m-top-30">
+                                        <ul class="arrow--list2">
+                                            {% if service.thirdsectionkindsofservicestitles.0 %}
+                                                <li class="list-item arrow-list5 d-flex align-content-center color-dark"><span><i class="la la-angle-right"></i></span> {{ service.thirdsectionkindsofservicestitles.0 }}: {{ service.thirdsectionkindsofservicesdescription.0 }}</li>
+                                            {% endif %}
+                                            {% if service.thirdsectionkindsofservicestitles.1 %}
+                                            <li class="list-item arrow-list5 d-flex align-content-center color-dark"><span><i class="la la-angle-right"></i></span> {{ service.thirdsectionkindsofservicestitles.1 }}: {{ service.thirdsectionkindsofservicesdescription.1 }}</li>
+                                            {% endif %}
+                                            {% if service.thirdsectionkindsofservicestitles.2 %}
+                                                <li class="list-item arrow-list5 d-flex align-content-center color-dark"><span><i class="la la-angle-right"></i></span> {{ service.thirdsectionkindsofservicestitles.2 }}: {{ service.thirdsectionkindsofservicesdescription.2 }}</li>
+                                            {% endif %}
+                                            {% if service.thirdsectionkindsofservicestitles.3 %}
+                                                <li class="list-item arrow-list5 d-flex align-content-center color-dark"><span><i class="la la-angle-right"></i></span> {{ service.thirdsectionkindsofservicestitles.3 }}: {{ service.thirdsectionkindsofservicesdescription.3 }}</li>
+                                            {% endif %}
+                                            {% if service.thirdsectionkindsofservicestitles.4 %}
+                                                <li class="list-item arrow-list5 d-flex align-content-center color-dark"><span><i class="la la-angle-right"></i></span> {{ service.thirdsectionkindsofservicestitles.4 }}: {{ service.thirdsectionkindsofservicesdescription.4 }}</li>
+                                            {% endif %}
+                                            {% if service.thirdsectionkindsofservicestitles.5 %}
+                                                <li class="list-item arrow-list5 d-flex align-content-center color-dark"><span><i class="la la-angle-right"></i></span> {{ service.thirdsectionkindsofservicestitles.5 }}: {{ service.thirdsectionkindsofservicesdescription.5 }}</li>
+                                            {% endif %}
+                                            {% if service.thirdsectionkindsofservicestitles.6 %}
+                                                <li class="list-item arrow-list5 d-flex align-content-center color-dark"><span><i class="la la-angle-right"></i></span> {{ service.thirdsectionkindsofservicestitles.6 }}: {{ service.thirdsectionkindsofservicesdescription.6 }}</li>
+                                            {% endif %}
+                                        </ul>
+                                    </div>
+                                    <!--<div class="accordion accordion_one" id="accordion_one">
+                                        {% if service.thirdsectionkindsofservicestitles.0 %}
+                                            <div class="accordion-single">
+                                                <div class="accordion-heading" id="headingOne">
+                                                    <h6 class="mb-0">
+                                                        <a href="#" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                            {{ service.thirdsectionkindsofservicestitles.0 }}
+                                                        </a>
+                                                    </h6>
+                                                </div>
+                                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion_one">
+                                                    <div class="accordion-contents">
+                                                        <p>{{ service.thirdsectionkindsofservicesdescription.0 }}</p>
+                                                    </div>
+                                                </div>--><!-- Ends: .collapseOne -->
+                                            <!--</div>--><!-- Ends: .accordion-single -->
+                                        <!--{% endif %}
+                                        {% if service.thirdsectionkindsofservicestitles.1 %}
+                                            <div class="accordion-single">
+                                                <div class="accordion-heading" id="headingTwo">
+                                                    <h6 class="mb-0">
+                                                        <a href="#" class="collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                            {{ service.thirdsectionkindsofservicestitles.1 }}
+                                                        </a>
+                                                    </h6>
+                                                </div>
+                                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion_one">
+                                                    <div class="accordion-contents">
+                                                        <p>I{{ service.thirdsectionkindsofservicesdescription.1 }}</p>
+                                                    </div>
+                                                </div>
+                                            </div>--><!-- Ends: .accordion-single -->
+                                        <!--{% endif %}
+                                        {% if service.thirdsectionkindsofservicestitles.2 %}
+                                            <div class="accordion-single">
+                                                <div class="accordion-heading" id="headingThree">
+                                                    <h6 class="mb-0">
+                                                        <a href="#" class="collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                            {{ service.thirdsectionkindsofservicestitles.2 }}
+                                                        </a>
+                                                    </h6>
+                                                </div>
+                                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion_one">
+                                                    <div class="accordion-contents">
+                                                        <p>{{ service.thirdsectionkindsofservicesdescription.2 }}</p>
+                                                    </div>
+                                                </div>--><!-- Ends: .collapseOne -->
+                                            <!--</div>--><!-- Ends: .accordion-single -->
+                                        <!--{% endif %}
+                                        {% if service.thirdsectionkindsofservicestitles.3 %}
+                                            <div class="accordion-single">
+                                                <div class="accordion-heading" id="headingFour">
+                                                    <h6 class="mb-0">
+                                                        <a href="#" class="collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                                            {{ service.thirdsectionkindsofservicestitles.3 }}
+                                                        </a>
+                                                    </h6>
+                                                </div>
+                                                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion_one">
+                                                    <div class="accordion-contents">
+                                                        <p>{{ service.thirdsectionkindsofservicesdescription.3 }}</p>
+                                                    </div>
+                                                </div>--><!-- Ends: .collapseOne -->
+                                            <!--</div>--><!-- Ends: .accordion-single -->
+                                        <!--{% endif %}
+                                        {% if service.thirdsectionkindsofservicestitles.4 %}
+                                            <div class="accordion-single">
+                                                <div class="accordion-heading" id="headingFive">
+                                                    <h6 class="mb-0">
+                                                        <a href="#" class="collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                                            {{ service.thirdsectionkindsofservicestitles.4 }}
+                                                        </a>
+                                                    </h6>
+                                                </div>
+                                                <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion_one">
+                                                    <div class="accordion-contents">
+                                                        <p>{{ service.thirdsectionkindsofservicesdescription.4 }}</p>
+                                                    </div>
+                                                </div>--><!-- Ends: .collapseOne -->
+                                            <!--</div>--><!-- Ends: .accordion-single -->
+                                        <!--{% endif %}
+                                        {% if service.thirdsectionkindsofservicestitles.5 %}
+                                            <div class="accordion-single">
+                                                <div class="accordion-heading" id="headingFive">
+                                                    <h6 class="mb-0">
+                                                        <a href="#" class="collapsed" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseFive">
+                                                            {{ service.thirdsectionkindsofservicestitles.5 }}
+                                                        </a>
+                                                    </h6>
+                                                </div>
+                                                <div id="collapseSix" class="collapse" aria-labelledby="headingFive" data-parent="#accordion_one">
+                                                    <div class="accordion-contents">
+                                                        <p>{{ service.thirdsectionkindsofservicesdescription.5 }}</p>
+                                                    </div>
+                                                </div>--><!-- Ends: .collapseOne -->
+                                            <!--</div>--><!-- Ends: .accordion-single -->
+                                        <!--{% endif %}
+                                        {% if service.thirdsectionkindsofservicestitles.6 %}
+                                            <div class="accordion-single">
+                                                <div class="accordion-heading" id="headingFive">
+                                                    <h6 class="mb-0">
+                                                        <a href="#" class="collapsed" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseFive">
+                                                            {{ service.thirdsectionkindsofservicestitles.6 }}
+                                                        </a>
+                                                    </h6>
+                                                </div>
+                                                <div id="collapseSeven" class="collapse" aria-labelledby="headingFive" data-parent="#accordion_one">
+                                                    <div class="accordion-contents">
+                                                        <p>{{ service.thirdsectionkindsofservicesdescription.6 }}</p>
+                                                    </div>
+                                                </div>--><!-- Ends: .collapseOne -->
+                                            <!--</div>--><!-- Ends: .accordion-single -->
+                                        <!--{% endif %}
+                                    </div>--><!-- Ends: #accordion_one -->
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- Ends: accordion-styles -->
+                </section><!-- ends: section -->
+        {% endif %}
+        {% if service.fourthsectiontitle %}
+                <section class="p-top-100 p-bottom-80 section-bg">
+                    <div class="m-bottom-50 p-left-15 p-right-15">
+                        <div class="divider text-center">
+                            <h1>{{ service.fourthserctiontitle }}</h1>
+                            <p class="mx-auto"></p>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6">
+                                <div class="pricing pricing--1 shadow-lg-2">
+                                    <div class="pricing__title">
+                                        <h4>{{ service.fourthserctionpricingoptionstitles.0 }}</h4>
+                                        <span>{{ service.fourthserctionpricingoptionstitles.1 }}</span>
+                                    </div>
+                                    <div class="pricing__price rounded">
+                                        <p><sup>{{ service.fourthserctionfirstpricingoptionprice.0 }}</sup>{{ service.fourthserctionfirstpricingoptionprice.1 }}<small>/{{ service.fourthserctionfirstpricingoptionprice.2 }}</small></p>
+                                    </div>
+                                    <div class="pricing__features">
+                                        <ul>
+                                            <li>{{ service.fourthserctionfirstpricingoptionfeatures.0 }}</li>
+                                            <li>{{ service.fourthserctionfirstpricingoptionfeatures.1 }}</li>
+                                            <li>{{ service.fourthserctionfirstpricingoptionfeatures.2 }}</li>
+                                            <li>{{ service.fourthserctionfirstpricingoptionfeatures.3 }}</li>
+                                            <li>{{ service.fourthserctionfirstpricingoptionfeatures.4 }}</li>
+                                        </ul><!-- end: .pricing__features > .pricing -->
+                                    </div>
+                                    <a href="#" class="btn btn-outline-secondary">purchase</a>
+                                </div><!-- end: .pricing -->
+                            </div><!-- ends .col-lg-4 -->
+                            <div class="col-lg-4 col-md-6">
+                                <div class="pricing pricing--1 shadow-lg-2">
+                                    <div class="pricing__title">
+                                        <h4>{{ service.fourthserctionpricingoptionstitles.2 }}</h4>
+                                        <span>{{ service.fourthserctionpricingoptionstitles.3 }}</span>
+                                    </div>
+                                    <div class="pricing__price rounded">
+                                        <p><sup>{{ service.fourthserctionsecondpricingoptionprice.0 }}</sup>{{ service.fourthserctionsecondpricingoptionprice.1 }}<small>/{{ service.fourthserctionsecondpricingoptionprice.2 }}</small></p>
+                                    </div>
+                                    <div class="pricing__features">
+                                        <ul>
+                                            <li>{{ service.fourthserctionsecondpricingoptionfeatures.0 }}</li>
+                                            <li>{{ service.fourthserctionsecondpricingoptionfeatures.1 }}</li>
+                                            <li>{{ service.fourthserctionsecondpricingoptionfeatures.2 }}</li>
+                                            <li>{{ service.fourthserctionsecondpricingoptionfeatures.3 }}</li>
+                                            <li>{{ service.fourthserctionsecondpricingoptionfeatures.4 }}</li>
+                                        </ul><!-- end: .pricing__features > .pricing -->
+                                    </div>
+                                    <a href="#" class="btn btn-outline-secondary">purchase</a>
+                                </div><!-- end: .pricing -->
+                            </div><!-- ends .col-lg-4 -->
+                            <div class="col-lg-4 col-md-6">
+                                <div class="pricing pricing--1 shadow-lg-2">
+                                    <div class="pricing__title">
+                                        <h4>{{ service.fourthserctionpricingoptionstitles.4 }}</h4>
+                                        <span>{{ service.fourthserctionpricingoptionstitles.5 }}</span>
+                                    </div>
+                                    <div class="pricing__price rounded">
+                                        <p><sup>{{ service.fourthserctionthirdpricingoptionprice.0 }}</sup>{{ service.fourthserctionthirdpricingoptionprice.1 }}<small>/{{ service.fourthserctionthirdpricingoptionprice.2 }}</small></p>
+                                    </div>
+                                    <div class="pricing__features">
+                                        <ul>
+                                            <li>{{ service.fourthserctionthirdpricingoptionfeatures.0 }}</li>
+                                            <li>{{ service.fourthserctionthirdpricingoptionfeatures.1 }}</li>
+                                            <li>{{ service.fourthserctionthirdpricingoptionfeatures.2 }}</li>
+                                            <li>{{ service.fourthserctionthirdpricingoptionfeatures.3 }}</li>
+                                            <li>{{ service.fourthserctionthirdpricingoptionfeatures.4 }}</li>
+                                        </ul><!-- end: .pricing__features > .pricing -->
+                                    </div>
+                                    <a href="#" class="btn btn-outline-secondary">purchase</a>
+                                </div><!-- end: .pricing -->
+                            </div><!-- ends .col-lg-4 -->
+                        </div>
+                    </div>
+                </section><!-- ends: section -->
+        {% endif %}
+            <section class="p-top-100 p-bottom-80">
+                {% if service.fifithsectiontitle %}
+                    <div class="m-bottom-50 p-left-15 p-right-15">
+                        <div class="divider text-center">
+                            <h1>{{ service.fifthsectiontitle }}</h1>
+                            <p class="mx-auto"></p>
+                        </div>
+                    </div>
+                    <div class="team--card2">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-3 col-sm-6">
+                                    <div class="card card--team2">
+                                        <figure>
+                                            <img src="img/t4.jpg" alt="">
+                                            <figcaption>
+                                                <ul class="team-social d-flex justify-content-center">
+                                                    <li><a href=""><i class="fab fa-google-plus-g"></i></a></li>
+                                                    <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                                                    <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                                                    <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
+                                                </ul>
+                                                <a href="team-single.html" class="btn btn-sm btn-outline-light">View Profile</a>
+                                            </figcaption>
+                                        </figure>
+                                        <div class="card-body bg-primary">
+                                            <a href="team-single.html">
+                                                <h6>{{ service.fifthsectionteammembersname.0 }}</h6>
+                                            </a>
+                                            <span>{{ service.fifthsectionfirstteammemberfunctions.0 }} &amp; {{ service.fifthsectionfirstteammemberfunctions.1 }}</span>
+                                        </div>
+                                    </div><!-- End: .card -->
+                                </div><!-- ends: .col-lg-3 -->
+                                <div class="col-lg-3 col-sm-6">
+                                    <div class="card card--team2">
+                                        <figure>
+                                            <img src="img/t5.jpg" alt="">
+                                            <figcaption>
+                                                <ul class="team-social d-flex justify-content-center">
+                                                    <li><a href=""><i class="fab fa-google-plus-g"></i></a></li>
+                                                    <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                                                    <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                                                    <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
+                                                </ul>
+                                                <a href="team-single.html" class="btn btn-sm btn-outline-light">View Profile</a>
+                                            </figcaption>
+                                        </figure>
+                                        <div class="card-body bg-primary">
+                                            <a href="team-single.html">
+                                                <h6>{{ service.fifthsectionteammembersname.1 }}</h6>
+                                            </a>
+                                            <span>{{ service.fifthsectionsecondteammemberfunctions.1 }}</span>
+                                        </div>
+                                    </div><!-- End: .card -->
+                                </div><!-- ends: .col-lg-3 -->
+                                <div class="col-lg-3 col-sm-6">
+                                    <div class="card card--team2">
+                                        <figure>
+                                            <img src="img/t6.jpg" alt="">
+                                            <figcaption>
+                                                <ul class="team-social d-flex justify-content-center">
+                                                    <li><a href=""><i class="fab fa-google-plus-g"></i></a></li>
+                                                    <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                                                    <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                                                    <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
+                                                </ul>
+                                                <a href="team-single.html" class="btn btn-sm btn-outline-light">View Profile</a>
+                                            </figcaption>
+                                        </figure>
+                                        <div class="card-body bg-primary">
+                                            <a href="team-single.html">
+                                                <h6>{{ service.fifthsectionteammembersname.2 }}</h6>
+                                            </a>
+                                            <span>{{ service.fifthsectionthirdteammemberfunctions.2 }}</span>
+                                        </div>
+                                    </div><!-- End: .card -->
+                                </div><!-- ends: .col-lg-3 -->
+                                <div class="col-lg-3 col-sm-6">
+                                    <div class="card card--team2">
+                                        <figure>
+                                            <img src="img/t7.jpg" alt="">
+                                            <figcaption>
+                                                <ul class="team-social d-flex justify-content-center">
+                                                    <li><a href=""><i class="fab fa-google-plus-g"></i></a></li>
+                                                    <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                                                    <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                                                    <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
+                                                </ul>
+                                                <a href="team-single.html" class="btn btn-sm btn-outline-light">View Profile</a>
+                                            </figcaption>
+                                        </figure>
+                                        <div class="card-body bg-primary">
+                                            <a href="team-single.html">
+                                                <h6>{{ service.fifthsectionteammembersname.3 }}</h6>
+                                            </a>
+                                            <span>{{ service.fifthsectionfourthteammemberfunctions.3 }}</span>
+                                        </div>
+                                    </div><!-- End: .card -->
+                                </div><!-- ends: .col-lg-3 -->
+                            </div><!-- ends: .row -->
+                        </div>
+                    </div><!-- ends: .team--card2 -->
+                {% endif %}
+                <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+                <style type="text/css">
+                    #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+                    /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+                        We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+                </style>
+                <div id="quotation"></div>
+                <br><br><br><br><br><br><br><br>
+                <div class="container">
+                {% if status %}
+                    <div class="alert alert-{{ status }} alert-dismissible fade show"
+                        role="alert">
+                        {{ message }}
+                        <button type="button" class="close" data-dismiss="alert"
+                                aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                {% endif %}
+                <div id = "g-recaptcha-error"></div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h4 class="border-bottom p-bottom-25 m-bottom-40">Informações Pessoais</h4>
+                        <form action="https://mac5.us17.list-manage.com/subscribe/post?u=f4c437132bdc4e6f16784e633&amp;id=a6c6ba8392" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate> {% csrf_token %}
+                            {% for field in form %}
+                            <div class="fieldWrapper">
+                                {{ field.label_tag }} {{ field }}
+                            </div>
+                            {% endfor %}
+                            <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span></label>
+                            <input type="email" value="" name="EMAIL" class="required email form-control" id="mce-EMAIL"placeholder="seuemail@exemplo.com">
+                            <div class="g-recaptcha" data-sitekey="6Lfwu48UAAAAAMtMlRPLmO0ZbCyeQGdODdBvK8TC" data-callback="verifyCaptcha"></div>
+                            <div id="mce-responses" class="clear">
+                            <div class="response" id="mce-error-response" style="display:none"></div>
+                            <div class="response" id="mce-success-response" style="display:none"></div>
+                            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_f4c437132bdc4e6f16784e633_a6c6ba8392" tabindex="-1" value=""></div>
+                            <button type="submit" class="btn btn-primary m-right-25">Enviar</button>
+                        </form>
+                    </div>
+                </div><!-- end: .row -->
+            </div>
+            <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+            <script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='PHONE';ftypes[2]='phone';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+            </section><!-- ends: section -->
+            {% if service.sixthsectiontitle %}
+                <section class="cta-wrapper cta--eight gradient-overlay">
+                    <div class="container content_above">
+                        <div class="row">
+                            <div class="col-lg-8 offset-lg-2 text-center">
+                                <h1 class="color-light m-bottom-50">{{ service.sixthsectiontitle }}</h1>
+                                <a href="" class="btn btn-primary">{{ service.sixthsectiondescription }}</a>
+                            </div>
+                        </div><!-- ends: .cta-wrapper -->
+                    </div>
+                </section><!-- ends: .cta-wrapper -->
+            {% endif %}
+        </div>
+
+    <script>
+        function submitUserForm() {
+            var response = grecaptcha.getResponse();
+            if(response.length == 0) {
+                document.getElementById('g-recaptcha-error').innerHTML = '<span style="color:red;">This field is required.</span>';
+                return false;
+            }
+            return true;
+        }
+         
+        function verifyCaptcha() {
+            document.getElementById('g-recaptcha-error').innerHTML = '<div class="alert alert-{{ status }} alert-dismissible fade show"  role="alert"><span style="color:green;">Capatcha verifyed sucessfully.</span><button type="button" class="close" data-dismiss="alert"aria-label="Close"><span aria-hidden="true">&times;</span></button></div>';
+        }
+    </script>
+{% endblock %}

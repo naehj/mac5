@@ -1,0 +1,101 @@
+{% extends 'base.html'%}
+
+
+{% block title %}Fale Conosco{% endblock %}
+
+
+{% block body %}
+{% load static %}
+    <style type="text/css">
+            /* Set a size for our map container, the Google Map will take up 100% of this container */
+            #map {
+                width: 100%;
+                height: 420px;
+            }
+    </style>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+    <script type="text/javascript">
+            // When the window has finished loading create our google map below
+            google.maps.event.addDomListener(window, 'load', init);
+        
+            function init() {
+                // Basic options for a simple Google Map
+                // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+                var mapOptions = {
+                    // How zoomed in you want the map to start at (always required)
+                    zoom: 18,
+
+                    // The latitude and longitude to center the map (always required)
+                    center: new google.maps.LatLng(-7.111500, -34.829193), // Av. Esperança, 117 – Ed. Manaíra Trade Center
+
+                    // How you would like to style the map. 
+                    // This is where you would paste any style found on Snazzy Maps.
+                    styles: [{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#eafafd"}]},{"featureType":"landscape.natural.landcover","elementType":"geometry.fill","stylers":[{"color":"#b5fc68"},{"visibility":"on"}]},{"featureType":"landscape.natural.terrain","elementType":"geometry.fill","stylers":[{"color":"#c1ff57"}]},{"featureType":"poi","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"hue":"#1900ff"},{"color":"#c0e8e8"}]},{"featureType":"poi.attraction","elementType":"labels","stylers":[{"visibility":"on"}]},{"featureType":"poi.business","elementType":"labels.text","stylers":[{"visibility":"on"}]},{"featureType":"poi.business","elementType":"labels.icon","stylers":[{"visibility":"on"}]},{"featureType":"poi.park","elementType":"geometry.fill","stylers":[{"color":"#d4f77d"}]},{"featureType":"road","elementType":"geometry","stylers":[{"lightness":100},{"visibility":"simplified"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"labels.text","stylers":[{"visibility":"on"}]},{"featureType":"road.highway","elementType":"labels.text","stylers":[{"visibility":"on"}]},{"featureType":"road.highway.controlled_access","elementType":"labels.text","stylers":[{"visibility":"on"}]},{"featureType":"road.arterial","elementType":"labels.text","stylers":[{"visibility":"on"}]},{"featureType":"road.local","elementType":"labels.text","stylers":[{"visibility":"on"}]},{"featureType":"transit.line","elementType":"geometry","stylers":[{"visibility":"on"},{"lightness":700}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#7dcdcd"}]}]
+                };
+
+                // Get the HTML DOM element that will contain your map 
+                // We are using a div with id="map" seen below in the <body>
+                var mapElement = document.getElementById('map');
+
+                // Create the Google Map using our element and options defined above
+                var map = new google.maps.Map(mapElement, mapOptions);
+
+                // Let's also add a marker while we're at it
+                var marker = new google.maps.Marker({
+                    position: new google.maps.LatLng(-7.111500, -34.829193),
+                    map: map,
+                    title: 'Snazzy!'
+                });
+            }
+        </script>
+    <div id="content">
+        <section class="breadcrumb_area breadcrumb2 bgimage biz_overlay">
+            <div class="bg_image_holder">
+                <img src="{% static 'img/mac5bg.jpg'%}" alt="">
+            </div>
+            <div class="container content_above">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="breadcrumb_wrapper d-flex flex-column align-items-center">
+                            <h4 class="page_title">Contate-nos</h4>
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb m-bottom-30">
+                                    <li class="breadcrumb-item"><a href="/">Home</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Contate-nos</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </div><!-- ends: .row -->
+            </div>
+        </section><!-- ends: .breadcrumb_area -->
+        <section class="p-top-100 p-bottom-110">
+            <section class="form-wrapper contact--from5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="adress">
+                                <p align="left">Whatsapp: (83) 9.9391.4750</p>
+                                <p align="left">Email: <a href="mailto:falecom@mac5.com.br" target="_top">falecom@mac5.com.br</a></p>
+                            </div><!-- end: .adress -->
+                            <div class="form-wrapper">
+                                <form method="POST" class="post-form"> {% csrf_token %}
+                                    {% for field in form %}
+                                        <div class="fieldWrapper">
+                                            <p>{{ field }}</p>
+                                        </div>
+                                    {% endfor %}
+                                    <button type="submit" class="btn btn-primary m-right-25">Enviar Mensagem</button>
+                                </form>
+                            </div><!-- end: .form-wrapper -->
+                        </div>
+                    </div>
+                </div>
+            </section><!-- ends: .form-wrapper -->
+        </section><!-- ends: section -->
+        <div class="divider text-center m-bottom-50">
+            <h1 class="color-dark m-0">Encontre-nos no mapa</h1>
+        </div>
+        <div id="map"></div><!-- end: .map -->
+    </div>
+{% endblock %}

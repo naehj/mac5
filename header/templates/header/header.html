@@ -1,0 +1,63 @@
+<script type="text/javascript">
+    window.onload=function(){
+        var title = document.getElementById('title');
+        title.value = document.title
+
+        if(title.value == 'Home Page'){
+            document.getElementById('home').className += ' active';
+        }
+        else if(title.value == 'Quem Somos'){
+            document.getElementById('quem').className += ' active';
+        }
+        else if(title.value == 'Todos os Serviços' || title.value == 'Contabilidade' || title.value == 'Conciliação Bancária' || title.value == 'Meios de Pagamento' || title.value == 'Automação Comercial' || title.value == 'Seguros' || title.value == 'Telefonia'){
+            document.getElementById('serviços').className += ' active';
+        }
+        else if(title.value == 'Fale Conosco'){
+            document.getElementById('contato').className += ' active';
+        }
+    }
+</script>
+
+
+<section class="header header--2">
+        <!-- start menu area -->
+        <input type="hidden" id="title">
+        {% load static %}
+        <div class="menu_area menu1">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-fixed-top navbar-light bg-light px-0" style="padding: 5px">
+                    <a class="navbar-brand order-sm-1 order-1" href="/" style="margin-left: 200px"><img src="{% static 'img/mac5_new.png'%}" alt="" width="125" height="125"/></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent2" aria-controls="navbarSupportedContent2" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="la la-bars"></span>
+                    </button>
+                    <div class="collapse navbar-collapse order-md-1" id="navbarSupportedContent2" style="margin-right: 200px">
+                        <ul class="navbar-nav m-auto">
+                            <li class="nav-item" id="home">
+                                <a class="nav-link" href="/">Página Inicial</a>
+                            </li>
+                            <li class="nav-item" id="quem" style="padding-left: 5px">
+                                <a class="nav-link" href="/quemsomos/">Quem Somos</a>
+                            </li>
+                            <li class="nav-item dropdown" id="serviços" style="padding-left: 5px">
+                                <a class="nav-link" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Serviços</a>
+                                <div class="dropdown-menu">
+                                    <a href="/servicespage/allservices/" id="todos">Todos os Serviços</a>
+                                    <a href="/servicespage/servicosdecontabilidade/" id="contabilidade">Contabilidade</a>
+                                    <a href="/servicespage/conciliacaobancaria/" id="conciliacao">Conciliação Bancária</a>
+                                    <a href="/servicespage/opcoesdepagamento/" id="pagamento">Meios de Pagamento</a>
+                                    <a href="/servicespage/automacaocomercial/" id="automacao">Automação Comercial</a>
+                                    <a href="/servicespage/seguros/" id="seguros">Seguros</a><br>
+                                    <a href="/servicespage/telefonia/" id="telefonia">Telefonia</a>
+                                </div>
+                            </li>
+                            <li class="nav-item" id="contato" style="padding-left: 10px">
+                                <a class="nav-link" href="/contactpage/contact/new/">Fale Conosco</a>
+                            </li>                                
+                        </ul>
+                        <!-- end: .navbar-nav -->
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- end menu area -->
+    </section><!-- end: .header -->

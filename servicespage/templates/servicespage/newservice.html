@@ -1,0 +1,19 @@
+{% extends 'base.html'%}
+
+
+{% block title %}New Service{% endblock %}
+
+
+{% block body %}
+   <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h4 class="border-bottom p-bottom-25 m-bottom-40">Service Information</h4>
+                <form method="POST" class="post-form"> {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit" class="btn btn-primary m-right-25">Add new service</button>
+                </form>
+           </div>
+        </div><!-- end: .row -->
+    </div>
+{% endblock %}

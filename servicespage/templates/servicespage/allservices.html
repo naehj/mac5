@@ -1,0 +1,156 @@
+{% extends 'base.html'%}
+
+
+{% block title %}Todos os Serviços{% endblock %}
+
+
+{% block body %}
+{% load static %}
+    <section class="breadcrumb_area breadcrumb2 bgimage biz_overlay">
+        <div class="bg_image_holder">
+            <img src="{% static 'img/mac5bg.jpg'%}" alt="">
+        </div>
+        <div class="container content_above">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="breadcrumb_wrapper d-flex flex-column align-items-center">
+                        <h4 class="page_title">Serviços</h4>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb m-bottom-30">
+                                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Serviços</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div><!-- ends: .row -->
+        </div>
+    </section><!-- ends: .breadcrumb_area -->
+        <section class="project-grid-3 section-padding2 section-bg">
+            <div class="filter-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="filter-sort">
+                                <ul id="category_filter">
+                                    <li data-uk-filter="" class="active"> Todos </li>
+                                    <li data-uk-filter="1"> Serviços de Contabilidade </li>
+                                    <li data-uk-filter="2"> Conciliação Bancária </li>
+                                    <li data-uk-filter="3"> Meios de Pagamento </li>
+                                    <li data-uk-filter="4"> Automação Comercial </li>
+                                    <li data-uk-filter="5"> Seguros </li>
+                                    <li data-uk-filter="6"> Telefonia </li>
+                                </ul>
+                            </div><!-- ends: .filter-sort -->
+                        </div><!-- ends: .col-lg-12 -->
+                        {% if services %}
+                        <div class="col-lg-12">
+                            <div class="row" data-uk-grid="{controls: '#category_filter'}">
+                                {% for service in services %}
+                                {% if service.category == 'Serviços de Contabilidade' %}
+                                <div class="filtr-item col-lg-4 col-md-6" data-uk-filter="1">
+                                    <div class="card card-shadow card-one">
+                                        <figure>
+                                            <img src="{{ service.image }}" alt="">
+                                            <figcaption>
+                                                <a href="{{ service.URLtotheservice }}"><i class="la la-link"></i></a>
+                                            </figcaption>
+                                        </figure>
+                                        <div class="card-body">
+                                            <p class="card-subtitle color-secondary">{{ service.category }}</p>
+                                            <h6><a href="{{ service.URLtotheservice }}">{{ service.nameoftheservice }}</a></h6>
+                                        </div>
+                                    </div><!-- Ends: .card -->
+                                </div><!-- ends: .col-lg-4 -->
+                                {% endif %}
+                                {% if service.category == 'Conciliação Bancária' %}
+                                <div class="filtr-item col-lg-4 col-md-6" data-uk-filter="2">
+                                    <div class="card card-shadow card-one">
+                                        <figure>
+                                            <img src="{{ service.image }}" alt="">
+                                            <figcaption>
+                                                <a href="{{ service.URLtotheservice }}"><i class="la la-link"></i></a>
+                                            </figcaption>
+                                        </figure>
+                                        <div class="card-body">
+                                            <p class="card-subtitle color-secondary">{{ service.category }}</p>
+                                            <h6><a href="{{ service.URLtotheservice }}">{{ service.nameoftheservice }}</a></h6>
+                                        </div>
+                                    </div><!-- Ends: .card -->
+                                </div><!-- ends: .col-lg-4 -->
+                                {% endif %}
+                                {% if service.category == 'Meios de Pagamento' %}
+                                <div class="filtr-item col-lg-4 col-md-6" data-uk-filter="3">
+                                    <div class="card card-shadow card-one">
+                                        <figure>
+                                            <img src="{{ service.image }}" alt="">
+                                            <figcaption>
+                                                <a href="{{ service.URLtotheservice }}"><i class="la la-link"></i></a>
+                                            </figcaption>
+                                        </figure>
+                                        <div class="card-body">
+                                            <p class="card-subtitle color-secondary">{{ service.category }}</p>
+                                            <h6><a href="{{ service.URLtotheservice }}">{{ service.nameoftheservice }}</a></h6>
+                                        </div>
+                                    </div><!-- Ends: .card -->
+                                </div><!-- ends: .col-lg-4 -->
+                                {% endif %}
+                                {% if service.category == 'Automação Comercial' %}
+                                <div class="filtr-item col-lg-4 col-md-6" data-uk-filter="4">
+                                    <div class="card card-shadow card-one">
+                                        <figure>
+                                            <img src="{{ service.image }}" alt="">
+                                            <figcaption>
+                                                <a href="{{ service.URLtotheservice }}"><i class="la la-link"></i></a>
+                                            </figcaption>
+                                        </figure>
+                                        <div class="card-body">
+                                            <p class="card-subtitle color-secondary">{{ service.category }}</p>
+                                            <h6><a href="{{ service.URLtotheservice }}">{{ service.nameoftheservice }}</a></h6>
+                                        </div>
+                                    </div><!-- Ends: .card -->
+                                </div><!-- ends: .col-lg-4 -->
+                                {% endif %}
+                                {% if service.category == 'Seguros' %}
+                                <div class="filtr-item col-lg-4 col-md-6" data-uk-filter="5">
+                                    <div class="card card-shadow card-one">
+                                        <figure>
+                                            <img src="{{ service.image }}" alt="">
+                                            <figcaption>
+                                                <a href="{{ service.URLtotheservice }}"><i class="la la-link"></i></a>
+                                            </figcaption>
+                                        </figure>
+                                        <div class="card-body">
+                                            <p class="card-subtitle color-secondary">{{ service.category }}</p>
+                                            <h6><a href="{{ service.URLtotheservice }}">{{ service.nameoftheservice }}</a></h6>
+                                        </div>
+                                    </div><!-- Ends: .card -->
+                                </div><!-- ends: .col-lg-4 -->
+                                {% endif %}
+                                {% if service.category == 'Telefonia' %}
+                                <div class="filtr-item col-lg-4 col-md-6" data-uk-filter="6">
+                                    <div class="card card-shadow card-one">
+                                        <figure>
+                                            <img src="{{ service.image }}" alt="">
+                                            <figcaption>
+                                                <a href="{{ service.URLtotheservice }}"><i class="la la-link"></i></a>
+                                            </figcaption>
+                                        </figure>
+                                        <div class="card-body">
+                                            <p class="card-subtitle color-secondary">{{ service.category }}</p>
+                                            <h6><a href="{{ service.URLtotheservice }}">{{ service.nameoftheservice }}</a></h6>
+                                        </div>
+                                    </div><!-- Ends: .card -->
+                                </div><!-- ends: .col-lg-4 -->
+                                {% endif %}
+                                {% endfor %}
+                            </div>
+                        </div><!-- ends: .filtr-container -->
+                        {% else %}
+                            <p>Don't have services in the db</p>
+                        {% endif %}
+                    </div>
+                </div>
+            </div><!-- ends: .filter-wrapper -->
+        </section><!-- ends: section -->
+{% endblock %}

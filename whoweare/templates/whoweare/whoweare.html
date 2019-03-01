@@ -1,0 +1,242 @@
+{% extends 'base.html'%}
+
+
+{% block title %}Quem Somos{% endblock %}
+
+
+{% block body %}
+{% load static %}
+    <section class="breadcrumb_area breadcrumb2 bgimage biz_overlay">
+        <div class="bg_image_holder">
+            <img src="{% static 'img/mac5bg.jpg'%}" alt="">
+        </div>
+        <div class="container content_above">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="breadcrumb_wrapper d-flex flex-column align-items-center">
+                        <h4 class="page_title">{{ quemsomos.page_title }}</h4>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb m-bottom-30">
+                                <li class="breadcrumb-item"><a href="#">{{ quemsomos.pathlist.0 }}</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">{{ quemsomos.pathlist.1 }}</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div><!-- ends: .row -->
+        </div>
+    </section><!-- ends: .breadcrumb_area -->
+    {% if quemsomos.firstsectionabouttitles %}
+    <section class="about-links">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="d-flex justify-content-center">
+                        <li><a href="{{ quemsomos.firstsectionaboutURLS.0 }}" class="active">{{ quemsomos.firstsectionabouttitles.0 }}</a></li>
+                        <li><a href="{{ quemsomos.firstsectionaboutURLS.1 }}">{{ quemsomos.firstsectionabouttitles.1 }}</a></li>
+                        <li><a href="{{ quemsomos.firstsectionaboutURLS.2 }}">{{ quemsomos.firstsectionabouttitles.2 }}</a></li>
+                        <li><a href="{{ quemsomos.firstsectionaboutURLS.3 }}">{{ quemsomos.firstsectionabouttitles.3 }}</a></li>
+                        <li><a href="{{ quemsomos.firstsectionaboutURLS.4 }}">{{ quemsomos.firstsectionabouttitles.4 }}</a></li>
+                        <li><a href="{{ quemsomos.firstsectionaboutURLS.5 }}">{{ quemsomos.firstsectionabouttitles.5 }}</a></li>
+                        <li><a href="{{ quemsomos.firstsectionaboutURLS.6 }}">{{ quemsomos.firstsectionabouttitles.6 }}</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section><!-- ends: .about-links -->
+    {% endif %}
+    <div id="mvvsection"></div>
+    <br>
+    <section class="section-padding p-bottom-110">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 margin-md-60">
+                    <div class="m-bottom-30">
+                        <div class="divider divider-simple text-left">
+                            <h2 class="m-bottom-20">{{ quemsomos.fourthsectionmissionvisionvaluestitles.0 }}</h2>
+                        </div>
+                    </div>
+                    <p>{{ quemsomos.fourthsectionmissionvisionvaluesdescriptions.0 }}</p>
+                </div><!-- ends: .col-lg-4 -->
+                <div class="col-lg-4">
+                    <div class="m-bottom-30">
+                        <div class="divider divider-simple text-left">
+                            <h2 class="m-bottom-20">{{ quemsomos.fourthsectionmissionvisionvaluestitles.1 }}</h2>
+                        </div>
+                    </div>
+                    <p>{{ quemsomos.fourthsectionmissionvisionvaluesdescriptions.1 }}</p>
+                </div><!-- ends: .col-lg-4 -->
+                <div class="col-lg-4">
+                    <div class="m-bottom-30">
+                        <div class="divider divider-simple text-left">
+                            <h2 class="m-bottom-20">{{ quemsomos.fourthsectionmissionvisionvaluestitles.2 }}</h2>
+                        </div>
+                    </div>
+                    <div class="m-top-30">
+                        <ul class="arrow--list2">
+                            <li class="list-item arrow-list5 d-flex align-content-center color-dark"><span><i class="la la-angle-right"></i></span> {{ quemsomos.fourthsectionmissionvisionvaluesdescriptionsinlist.0 }}</li>
+                            <li class="list-item arrow-list5 d-flex align-content-center color-dark"><span><i class="la la-angle-right"></i></span> {{ quemsomos.fourthsectionmissionvisionvaluesdescriptionsinlist.1 }}</li>
+                            <li class="list-item arrow-list5 d-flex align-content-center color-dark"><span><i class="la la-angle-right"></i></span> {{ quemsomos.fourthsectionmissionvisionvaluesdescriptionsinlist.2 }}</li>
+                            <li class="list-item arrow-list5 d-flex align-content-center color-dark"><span><i class="la la-angle-right"></i></span> {{ quemsomos.fourthsectionmissionvisionvaluesdescriptionsinlist.3 }}</li>
+                            <li class="list-item arrow-list5 d-flex align-content-center color-dark"><span><i class="la la-angle-right"></i></span> {{ quemsomos.fourthsectionmissionvisionvaluesdescriptionsinlist.4 }}</li>
+                        </ul>
+                    </div>
+                </div><!-- ends: .col-lg-4 -->
+            </div>
+        </div>
+    </section><!-- ends: section -->
+    <div class="counter counter--7 biz_overlay overlay--primary">
+        <div class="bg_image_holder"><img src="{% static 'img/cbg5.jpg'%}" alt=""></div>
+        <div class="container content_above">
+            <div class="row align-items-center">
+                <div class="col-md-5 margin-md-60">
+                    <div class="counter_left_content">
+                        <h4>{{ quemsomos.thirdsectionenterprisetitle }}</h4>
+                        <p>{{ quemsomos.thirdsectionenterprisedescription }}</p>
+                    </div>
+                </div>
+                <div class="col-md-6 offset-md-1">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="counter_single">
+                                <p class="value count_up">520</p>
+                                <p class="title">USD Revenue</p>
+                            </div><!-- end: .counter_single -->
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="counter_single">
+                                <p class="value count_up">478</p>
+                                <p class="title">USD Assets</p>
+                            </div><!-- end: .counter_single -->
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="counter_single">
+                                <p class="value count_up">980</p>
+                                <p class="title">Employees</p>
+                            </div><!-- end: .counter_single -->
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="counter_single">
+                                <p class="value count_up">257</p>
+                                <p class="title">USD Net Income</p>
+                            </div><!-- end: .counter_single -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- ends: .counter -->
+    <section class="p-top-100 p-bottom-40">
+        <div class="m-bottom-55">
+            <div class="divider text-center m-bottom-50">
+                <h2 class="color-dark m-0">Porque escolher a MAC5</h2>
+            </div>
+        </div>
+        <div class="icon-boxes icon-box--six">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="icon-box-four d-flex">
+                            <div class="box-icon">
+                                <span class="icon-square-sm"><i class="la la-thumbs-up"></i></span>
+                            </div>
+                            <div class="box-content">
+                                <h6>Idéias inovadoras</h6>
+                                <p>Implementamos junto aos gestores idéias que agregam valor ao negócio e visam o sucesso empresarial.</p>
+                            </div>
+                        </div><!-- ends: .icon-box -->
+                    </div><!-- ends: .col-lg-4 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="icon-box-four d-flex">
+                            <div class="box-icon">
+                                <span class="icon-square-sm"><i class="la la-bar-chart"></i></span>
+                            </div>
+                            <div class="box-content">
+                                <h6>Experiência corporativa</h6>
+                                <p>Atuamos com vários segmentos de mercado em pequenas, médias e grandes empresas.</p>
+                            </div>
+                        </div><!-- ends: .icon-box -->
+                    </div><!-- ends: .col-lg-4 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="icon-box-four d-flex">
+                            <div class="box-icon">
+                                <span class="icon-square-sm"><i class="la la-money"></i></span>
+                            </div>
+                            <div class="box-content">
+                                <h6>Orçamento adequado</h6>
+                                <p>Realizamos estudo das necessidades e ofertamos orçamento adequado às soluções necessárias.</p>
+                            </div>
+                        </div><!-- ends: .icon-box -->
+                    </div><!-- ends: .col-lg-4 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="icon-box-four d-flex">
+                            <div class="box-icon">
+                                <span class="icon-square-sm"><i class="la la-pencil-square"></i></span>
+                            </div>
+                            <div class="box-content">
+                                <h6>Planejamento do investimento</h6>
+                                <p>Prestamos serviços de consultoria como parte da solução ofertada com objetivo de garantir o melhor investimento aos clientes.</p>
+                            </div>
+                        </div><!-- ends: .icon-box -->
+                    </div><!-- ends: .col-lg-4 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="icon-box-four d-flex">
+                            <div class="box-icon">
+                                <span class="icon-square-sm"><i class="la la-level-up"></i></span>
+                            </div>
+                            <div class="box-content">
+                                <h6>Crescimento Empresarial</h6>
+                                <p>Buscamos junto aos clientes proporcionar soluções focadas no crescimento empresarial e diferencial competitivo.</p>
+                            </div>
+                        </div><!-- ends: .icon-box -->
+                    </div><!-- ends: .col-lg-4 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="icon-box-four d-flex">
+                            <div class="box-icon">
+                                <span class="icon-square-sm"><i class="la la-lightbulb-o"></i></span>
+                            </div>
+                            <div class="box-content">
+                                <h6>Planejamento financeiro</h6>
+                                <p>Prestamos serviços de consultoria financeira como parte da solução ofertada bem como o melhor planejamento para os negócios.</p>
+                            </div>
+                        </div><!-- ends: .icon-box -->
+                    </div><!-- ends: .col-lg-4 -->
+                </div><!-- ends: .row -->
+            </div>
+            <div class="text-center">
+                <br>
+                <a href="/contactpage/contact/new" class="btn btn-primary">Fale Conosco</a>
+            </div>
+        </div><!-- ends: .icon-boxes -->
+    </section><!-- ends: section -->
+    <!--<section class="p-top-110">
+        <div class="testimonial-carousel-six-wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 offset-lg-1">
+                        <div class="testimonial-carousel-six owl-carousel">
+                            <div class="carousel-single">
+                                <img src="{% static 'img/client6.jpg'%}" alt="" class="rounded-circle">
+                                <h5>Amanda Richards</h5>
+                                <span class="sub-text">Customer Relations</span>
+                                <p>Demons trave runt lectores legere lius quod ii legunt saepius clary tyitas Investig ationes demon trave rungt. Investig ationes trave lector ompanies that responsibility in our core business. We work systematically to integrate corporate responsibility in our core business.</p>
+                            </div>--><!-- end: .carousel-single -->
+                            <!--<div class="carousel-single">
+                                <img src="{% static 'img/client6.jpg'%}" alt="" class="rounded-circle">
+                                <h5>Amanda Richards</h5>
+                                <span class="sub-text">Customer Relations</span>
+                                <p>Demons trave runt lectores legere lius quod ii legunt saepius clary tyitas Investig ationes demon trave rungt. Investig ationes trave lector ompanies that responsibility in our core business. We work systematically to integrate corporate responsibility in our core business.</p>
+                            </div>--><!-- end: .carousel-single -->
+                            <!--<div class="carousel-single">
+                                <img src="{% static 'img/client6.jpg'%}" alt="" class="rounded-circle">
+                                <h5>Amanda Richards</h5>
+                                <span class="sub-text">Customer Relations</span>
+                                <p>Demons trave runt lectores legere lius quod ii legunt saepius clary tyitas Investig ationes demon trave rungt. Investig ationes trave lector ompanies that responsibility in our core business. We work systematically to integrate corporate responsibility in our core business.</p>
+                            </div>--><!-- end: .carousel-single -->
+                        <!--</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>--><!-- ends: section -->
+{% endblock %}
